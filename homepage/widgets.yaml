@@ -3,24 +3,24 @@
 # https://gethomepage.dev/configs/info-widgets/
 
 - resources:
-    label: System
-    cpu: true
-    memory: true
-    uptime: true
-    units: metric
-    network: true
+  label: System
+  cpu: true
+  memory: true
+  uptime: true
+  units: metric
+  network: true
 
 - resources:
-    label: Storage
-    disk:
-      - /
-      - /mnt/sdcard
-    expanded: true
+  label: Storage
+  disk:
+    - /
+    - /mnt/sdcard
+  expanded: true
 
 - datetime:
-    text_size: xl
-    locale: nl-BE
-    format:
-      dateStyle: short
-      timeStyle: medium
-      hourCycle: h23
+  text_size: xl
+  locale: nl-BE
+  format:
+    dateStyle: short
+    timeStyle: medium
+    hourCycle: h23
