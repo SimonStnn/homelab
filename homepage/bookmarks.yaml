@@ -1,0 +1,12 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- edge-ai-11:
+    - Ollama API Endpoit:
+        - icon: ollama.png
+          href: http://edge-ai-11.tail539c2b.ts.net:11434/
+
+# Custom links for endpoints without a traditional web UI can be placed
+# here so they are easy to reference. These are not added as Homepage
+# services since they don't expose a browsable interface.

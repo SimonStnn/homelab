@@ -1,0 +1,35 @@
+name: portainer
+
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - TZ=Europe/Brussels
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - portainer_data:/data:rw
+    networks:
+      - homelab
+    ports:
+      - target: 9000
+        published: 9000
+        protocol: tcp
+        mode: host
+    # healthcheck:
+    #   test: ['CMD', 'portainer', '--healthcheck']
+    #   interval: 120s
+    #   timeout: 5s
+    #   retries: 3
+
+volumes:
+  portainer_data:
+    external: true
+
+networks:
+  homelab:
+    external: true

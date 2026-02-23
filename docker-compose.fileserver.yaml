@@ -1,0 +1,43 @@
+name: fileserver
+
+services:
+  filebrowser:
+    container_name: fileserver
+    image: filebrowser/filebrowser:latest
+    restart: unless-stopped
+    ports:
+      - target: 80
+        published: 8080
+        protocol: tcp
+        mode: host
+    volumes:
+      - fileserver-data:/database:rw
+      - /mnt/sdcard:/srv:rw
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      - homelab
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://localhost:80/health",
+        ]
+      interval: 120s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  homelab:
+    external: true
+
+volumes:
+  fileserver-data:
+    external: true

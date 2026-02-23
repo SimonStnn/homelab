@@ -1,0 +1,41 @@
+name: initializers
+
+services:
+  initializer:
+    image: alpine
+    container_name: volume_initializer
+    command: |
+      chown -R 1000:1000 /config
+    volumes:
+      - heimdall-config:/config:ro
+      - portainer_data:/data:ro
+      - n8n-data:/n8n:ro
+      - fileserver-data:/fileserver:ro
+      - opencode-data:/opencode:ro
+      - opencode-config:/opencode-config:ro
+      - open-webui:/open-webui:ro
+    networks:
+      - homelab
+
+volumes:
+  heimdall-config:
+    name: heimdall-config
+  portainer_data:
+    name: portainer_data
+  n8n-data:
+    name: n8n-data
+  fileserver-data:
+    name: fileserver-data
+  opencode-data:
+    name: opencode-data
+  opencode-config:
+    name: opencode-config
+  # n8n-postgres-data:
+  #   name: n8n-postgres-data
+  open-webui:
+    name: open-webui
+
+networks:
+  homelab:
+    name: homelab
+    driver: bridge

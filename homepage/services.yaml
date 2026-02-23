@@ -1,0 +1,42 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Management:
+       - Portainer:
+              icon: portainer.png
+              href: http://radxa-e25.tail539c2b.ts.net:9000
+              description: Container Management
+              server: my-docker
+              container: portainer
+
+- Automation:
+       - n8n:
+              icon: n8n.png
+              href: http://radxa-e25.tail539c2b.ts.net:5678
+              description: Workflow Automation
+              server: my-docker
+              container: n8n
+
+- Storage:
+       - FileBrowser:
+              icon: filebrowser.png
+              href: http://radxa-e25.tail539c2b.ts.net:8080
+              description: Web File Manager
+              server: my-docker
+              container: fileserver
+
+- Utilities:
+       - OpenCode:
+              icon: opencode.png
+              href: http://radxa-e25.tail539c2b.ts.net:4096
+              description: Code and AI playground
+              server: my-docker
+              container: opencode-web
+              siteMonitor: http://radxa-e25.tail539c2b.ts.net:4096/
+       - OpenWebUI:
+              icon: open-webui.png
+              href: http://radxa-e25.tail539c2b.ts.net:8090
+              description: Ollama frontend
+              server: my-docker
+              container: openwebui

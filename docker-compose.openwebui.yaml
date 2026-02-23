@@ -1,0 +1,51 @@
+name: openwebui
+
+services:
+  # Web-based frontend that connects to an Ollama backend.
+  # Ollama itself is not defined here; the service assumes
+  # a reachable host named "ollama" on the same Docker network.
+  #
+  # To run both locally you can add a stub ollama service below
+  # or simply start an external Ollama container separately:
+  #
+  # services:
+  #   ollama:
+  #     image: ghcr.io/ollama/ollama:latest
+  #     ports:
+  #       - target: 11434
+  #         published: 11434
+  #         protocol: tcp
+  #         mode: host
+  #     networks:
+  #       - homelab
+  #
+  openwebui:
+    container_name: openwebui
+    image: ghcr.io/open-webui/open-webui:main
+    restart: unless-stopped
+    ports:
+      # default UI port; adjust if the image exposes something else
+      - target: 8080
+        published: 8090
+        protocol: tcp
+        mode: host
+    environment:
+      - TZ=Europe/Brussels
+      - OLLAMA_BASE_URL=http://edge-ai-11.tail539c2b.ts.net:11434
+    volumes:
+      - open-webui:/app/backend/data:rw
+    networks:
+      - homelab
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsSL http://localhost:8090/ || exit 1"]
+      interval: 120s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  open-webui:
+    external: true
+
+networks:
+  homelab:
+    external: true
