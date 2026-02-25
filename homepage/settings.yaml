@@ -8,6 +8,8 @@ background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=fo
 headerStyle: boxedWidgets
 cardBlur: xs
 showStats: true
+# useEqualHeights: true
+disableIndexing: true
 
 quicklaunch:
   searchDescriptions: true
@@ -15,3 +17,65 @@ quicklaunch:
   showSearchSuggestions: true
   hideVisitURL: true
   provider: google # google, duckduckgo, bing, baidu, brave or custom
+
+layout:
+  "Root":
+    header: false
+    style: row
+    columns: 2
+    disableCollapse: true
+    "Radxa E25":
+      style: row
+      columns: 2
+      useEqualHeights: true
+      disableCollapse: true
+    "VIVES":
+      header: false
+      style: row
+      columns: 1
+      disableCollapse: true
+      "Edge AI 11":
+        style: row
+        columns: 1
+        disableCollapse: true
+      "Bachelor VM 58":
+        style: row
+        columns: 2
+        disableCollapse: true
+  "Home Server":
+    style: row
+    columns: 5
+    disableCollapse: true
+  "Projects":
+    header: false
+    style: row
+    columns: 2
+    disableCollapse: true
+    "Portfolio":
+      style: row
+      columns: 3
+    "Pop-a-loon":
+      style: row
+      columns: 2
+    "Signapse":
+      style: row
+      columns: 2
+    "Website Mara":
+      style: row
+      columns: 2
+  "Other":
+    header: false
+    style: row
+    columns: 2
+    "Other projects":
+      style: row
+      columns: 3
+      initiallyCollapsed: true
+      useEqualHeights: true
+      disableCollapse: false
+    "Packages":
+      style: row
+      columns: 3
+      initiallyCollapsed: true
+      useEqualHeights: true
+      disableCollapse: false

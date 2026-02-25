@@ -2,7 +2,8 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- Radxa E25:
+- Root:
+  - Radxa E25:
     - Portainer:
         icon: portainer.png
         href: http://radxa-e25.tail539c2b.ts.net:9000/
@@ -43,61 +44,36 @@
         container: fileserver
         siteMonitor: http://radxa-e25.tail539c2b.ts.net:8080/health
 
-- VIVES:
+
+  - VIVES:
     - Edge AI 11:
-        - Ollama API Endpoint:
-            icon: ollama.png
-            href: http://edge-ai-11.tail539c2b.ts.net:11434/
-            description: Ollama API for LLM hosting
-            siteMonitor: http://edge-ai-11.tail539c2b.ts.net:11434/
+      - Ollama API Endpoint:
+          icon: ollama.png
+          href: http://edge-ai-11.tail539c2b.ts.net:11434/
+          description: Ollama API for LLM hosting
+          siteMonitor: http://edge-ai-11.tail539c2b.ts.net:11434/
 
     - Bachelor VM 58:
-        - Heimdall:
-            icon: heimdall.png
-            href: http://bachelor-vm-58.tail539c2b.ts.net/
-            description: Service Dashboard
-            siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net/health
-        - Netdata:
-            icon: netdata.png
-            href: http://bachelor-vm-58.tail539c2b.ts.net:19999/
-            description: System Monitoring
-            siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:19999/api/v1/info
-        - Glances:
-            icon: glances.png
-            href: http://bachelor-vm-58.tail539c2b.ts.net:61208/
-            description: System Monitoring
-            siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:61208/api/4/status
-        - cAdvisor:
-            icon: cadvisor.png
-            href: http://bachelor-vm-58.tail539c2b.ts.net:18080/
-            description: Container Monitoring
-            siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
-
-- Portfolio:
-    - Personal Portfolio:
-        icon: https://simon.stijnen.be/favicon.ico
-        href: https://simon.stijnen.be/
-        description: Personal Portfolio Website
-    - Personal Portfolio Documentation:
-        icon: mkdocs.png
-        href: https://docs.simon.stijnen.be/
-        description: Personal Portfolio Documentation
-    - GitHub:
-        icon: github.png
-        href: https://github.com/SimonStnn/website/
-        description: GitHub Repository Portfolio
-    - Vercel:
-        icon: vercel.png
-        href: https://vercel.com/simonstnns-projects/website/
-        description: Vercel Portfolio Project
-    - Search Console:
-        icon: google-search-console.png
-        href: https://search.google.com/search-console/
-        description: Google Search Console for Portfolio
-    - Google Analytics:
-        icon: google-analytics.png
-        href: https://analytics.google.com/analytics/web/
-        description: Google Analytics for Portfolio
+      - Heimdall:
+          icon: heimdall.png
+          href: http://bachelor-vm-58.tail539c2b.ts.net/
+          description: Service Dashboard
+          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net/health
+      - Netdata:
+          icon: netdata.png
+          href: http://bachelor-vm-58.tail539c2b.ts.net:19999/
+          description: System Monitoring
+          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:19999/api/v1/info
+      - Glances:
+          icon: glances.png
+          href: http://bachelor-vm-58.tail539c2b.ts.net:61208/
+          description: System Monitoring
+          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:61208/api/4/status
+      - cAdvisor:
+          icon: cadvisor.png
+          href: http://bachelor-vm-58.tail539c2b.ts.net:18080/
+          description: Container Monitoring
+          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
 
 - Home Server:
   - Homepage:
@@ -121,59 +97,88 @@
       description: Self-hosted Password Manager
 
 - Projects:
-    - Pop-a-loon:
-      - Chrome web store:
-          icon: chrome.png
-          href: https://chromewebstore.google.com/detail/.../pahcoancbdjmffpmfbnjablnabomdocp
-          description: Pop-a-loon Store Listing — Chrome Web Store
-      - Firefox add-ons:
-          icon: firefox.png
-          href: https://addons.mozilla.org/en-US/firefox/addon/pop-a-loon
-          description: Pop-a-loon Store Listing — Firefox Add-ons
-      - Pop-a-loon API:
-          icon: https://raw.githubusercontent.com/SimonStnn/pop-a-loon/refs/heads/main/resources/icons/balloon.svg
-          href: https://pop-a-loon.stijnen.be/
-          description: Pop-a-loon API
-          siteMonitor: https://pop-a-loon.stijnen.be/api/health
-      - MongoDB Atlas:
-          icon: mongodb.png
-          href: https://cloud.mongodb.com/v2/65f9ed2a9ccb1477701f0583#/clusters
-          description: Pop-a-loon Database Viewer
+  - Portfolio:
+    - Personal Portfolio:
+        icon: https://simon.stijnen.be/favicon.ico
+        href: https://simon.stijnen.be/
+        description: Personal Portfolio Website
+    - Documentation:
+        icon: mkdocs.png
+        href: https://docs.simon.stijnen.be/
+        description: Personal Portfolio Documentation
+    - GitHub:
+        icon: github.png
+        href: https://github.com/SimonStnn/website/
+        description: GitHub Repository Portfolio
+    - Vercel:
+        icon: vercel.png
+        href: https://vercel.com/simonstnns-projects/website/
+        description: Vercel Portfolio Project
+    - Search Console:
+        icon: google-search-console.png
+        href: https://search.google.com/search-console/
+        description: Google Search Console for Portfolio
+    - Google Analytics:
+        icon: google-analytics.png
+        href: https://analytics.google.com/analytics/web/
+        description: Google Analytics for Portfolio  
 
-    - Signapse:
-        - Signapse Dashboard:
-            icon: https://signapse.devbitapp.be/favicon.ico
-            href: http://gesture-project1.tail539c2b.ts.net/
-            description: Signapse Dashboard - Sign language to text
-            siteMonitor: https://api.signapse.devbitapp.be/health
-            widgets:
-              - type: customapi
-                url: https://api.signapse.devbitapp.be/health
-                mappings:
-                  - label: API
-                    format: text
-                    remap:
-                      - value: 0
-                        to: DOWN
-                      - any: true # will map all other values
-                        to: UP
-        - K3s Cluster:
-            icon: kubernetes.png
-            href: http://gesture-project1.tail539c2b.ts.net:9000/
-            description: Portainer view of K3s cluster running Signapse services
+  - Pop-a-loon:
+    - Chrome web store:
+        icon: chrome.png
+        href: https://chromewebstore.google.com/detail/.../pahcoancbdjmffpmfbnjablnabomdocp
+        description: Pop-a-loon Store Listing — Chrome Web Store
+    - Firefox add-ons:
+        icon: firefox.png
+        href: https://addons.mozilla.org/en-US/firefox/addon/pop-a-loon
+        description: Pop-a-loon Store Listing — Firefox Add-ons
+    - Pop-a-loon API:
+        icon: https://raw.githubusercontent.com/SimonStnn/pop-a-loon/refs/heads/main/resources/icons/balloon.svg
+        href: https://pop-a-loon.stijnen.be/
+        description: Pop-a-loon API
+        siteMonitor: https://pop-a-loon.stijnen.be/api/health
+    - MongoDB Atlas:
+        icon: mongodb.png
+        href: https://cloud.mongodb.com/v2/65f9ed2a9ccb1477701f0583#/clusters
+        description: Pop-a-loon Database Viewer
 
-    - Website Mara:
-      - Website:
-          icon: https://website-mara-91c43.web.app/favicon.svg
-          href: https://website-mara-91c43.web.app/
-          description: Personal Blog and Projects
-          siteMonitor: https://website-mara-91c43.web.app/favicon.svg
-      - Firebase:
-          icon: firebase.png
-          href: https://console.firebase.google.com/u/0/project/website-mara-91c43/overview
-          description: Firebase Console for Website Mara — Hosting platform and database management
+  - Signapse:
+    - Signapse Dashboard:
+        icon: https://signapse.devbitapp.be/favicon.ico
+        href: http://gesture-project1.tail539c2b.ts.net/
+        description: Signapse Dashboard - Sign language to text
+        siteMonitor: https://api.signapse.devbitapp.be/health
+        statusStyle: "dot"
+        widgets:
+          - type: customapi
+            url: https://api.signapse.devbitapp.be/health
+            mappings:
+              - label: API
+                format: text
+                remap:
+                  - value: 0
+                    to: DOWN
+                  - any: true # will map all other values
+                    to: UP
+    - K3s Cluster:
+        icon: kubernetes.png
+        href: http://gesture-project1.tail539c2b.ts.net:9000/
+        description: Portainer view of K3s cluster running Signapse services
 
-- Other projects:
+  - Website Mara:
+    - Website:
+        icon: https://website-mara-91c43.web.app/favicon.svg
+        href: https://website-mara-91c43.web.app/
+        description: Personal Blog and Projects
+        siteMonitor: https://website-mara-91c43.web.app/favicon.svg
+        statusStyle: "dot"
+    - Firebase:
+        icon: firebase.png
+        href: https://console.firebase.google.com/u/0/project/website-mara-91c43/overview
+        description: Firebase Console for Website Mara — Hosting platform and database management
+
+- Other:
+  - Other projects:
     - Audionome:
         icon: https://audionome.streamlit.app/-/build/favicon.svg
         href: https://audionome.streamlit.app/
@@ -188,16 +193,20 @@
         description: Colorsplash - Simple image colorization API
         siteMonitor: https://colorsplash.vercel.app/api?color=00ee7750
 
-    - Packages:
-        - GO Package 'iseven':
-            icon: go.png
-            href: https://pkg.go.dev/github.com/SimonStnn/iseven
-            description: Go package for checking if a number is even
-        - GO Package 'isodd':
-            icon: go.png
-            href: https://pkg.go.dev/github.com/SimonStnn/isodd
-            description: Go package for checking if a number is odd
-        - NuGet Package 'SimonStnn.Fractions':
-            icon: https://www.nuget.org/favicon.ico
-            href: https://www.nuget.org/packages/SimonStnn.Fractions
-            description: NuGet package for fraction operations in C#
+  - Packages:
+    - GO Package 'iseven':
+        icon: go.png
+        href: https://pkg.go.dev/github.com/SimonStnn/iseven
+        description: Go package for checking if a number is even
+    - GO Package 'isodd':
+        icon: go.png
+        href: https://pkg.go.dev/github.com/SimonStnn/isodd
+        description: Go package for checking if a number is odd
+    - NuGet Package 'SimonStnn.Fractions':
+        icon: https://www.nuget.org/favicon.ico
+        href: https://www.nuget.org/packages/SimonStnn.Fractions
+        description: NuGet package for fraction operations in C#
+    - smart_gestures:
+        icon: pypi.png
+        href: https://pypi.org/project/smart_gestures/
+        description: AI models used in the Signapse project
