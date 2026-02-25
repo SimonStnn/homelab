@@ -6,12 +6,9 @@ services:
     image: filebrowser/filebrowser:latest
     restart: unless-stopped
     ports:
-      - target: 80
-        published: 8080
-        protocol: tcp
-        mode: host
+      - 8080:80
     volumes:
-      - fileserver-data:/database:rw
+      - /mnt/sdcard/homelab-volumes/fileserver-data:/database:rw
       - /mnt/sdcard:/srv:rw
     environment:
       - PUID=1000
@@ -36,8 +33,4 @@ services:
 
 networks:
   homelab:
-    external: true
-
-volumes:
-  fileserver-data:
     external: true

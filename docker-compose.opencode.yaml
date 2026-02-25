@@ -8,24 +8,9 @@ services:
     working_dir: /workspace
     ports:
       - "4096:4096"
-    # environment:
-      # Secures the web UI (The default username is 'opencode')
-      # - OPENCODE_SERVER_PASSWORD=your_secure_password
-
-      # Optional: Pass your LLM provider API keys here so OpenCode can use them
-      # - OPENAI_API_KEY=sk-...
-      # - ANTHROPIC_API_KEY=sk-ant-...
     volumes:
       - /mnt/sdcard/opencode:/workspace
       # Persists your OpenCode sessions, authentication, and configurations
       - opencode-data:/root/.local/share/opencode
-      - opencode-config:/root/.config/opencode
-
-    # Starts the web server bound to all network interfaces so it's accessible
+      - /root/.config/opencode:/root/.config/opencode:rw
     command: ["web", "--hostname", "0.0.0.0", "--port", "4096"]
-
-volumes:
-  opencode-data:
-    external: true
-  opencode-config:
-    external: true

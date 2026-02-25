@@ -6,11 +6,17 @@
   - Radxa E25:
     - Portainer:
         icon: portainer.png
-        href: http://radxa-e25.tail539c2b.ts.net:9000/
+        href: https://radxa-e25.tail539c2b.ts.net:9443/
         description: Container Management. Also monitors containers from VIVES VM's
         server: my-docker
         container: portainer
-        siteMonitor: http://radxa-e25.tail539c2b.ts.net:9000/api/system/status
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:9443/api/system/status
+        widgets:
+          - type: portainer
+            url: https://radxa-e25.tail539c2b.ts.net:9443
+            env: 3 # Local
+            # kubernetes: true # optional, defaults to false
+            key: "{{HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}}"
     - OpenCode:
         icon: opencode.png
         href: http://radxa-e25.tail539c2b.ts.net:4096/

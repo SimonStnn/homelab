@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=n8n_password
       - TZ=Europe/Brussels
     volumes:
-      - n8n-postgres-data:/var/lib/postgresql/data:rw
+      - /mnt/sdcard/homelab-volumes/n8n-postgres-data:/var/lib/postgresql/data:rw
     networks:
       - homelab
     healthcheck:
@@ -25,10 +25,7 @@ services:
     image: n8nio/n8n:latest
     restart: unless-stopped
     ports:
-      - target: 5678
-        published: 5678
-        protocol: tcp
-        mode: host
+      - 5678:5678
     environment:
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
@@ -43,7 +40,7 @@ services:
       postgres:
         condition: service_healthy
     volumes:
-      - n8n-data:/home/node/.n8n:rw
+      - /mnt/sdcard/homelab-volumes/n8n-data:/home/node/.n8n:rw
     networks:
       - homelab
     healthcheck:
@@ -55,12 +52,6 @@ services:
       interval: 120s
       timeout: 5s
       retries: 3
-
-volumes:
-  n8n-postgres-data:
-    external: true
-  n8n-data:
-    external: true
 
 networks:
   homelab:

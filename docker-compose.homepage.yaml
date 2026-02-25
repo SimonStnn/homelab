@@ -6,10 +6,7 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     restart: unless-stopped
     ports:
-      - target: 3000
-        published: 80
-        protocol: tcp
-        mode: host
+      - 80:3000
     volumes:
       - ./homepage:/app/config:rw
       - /mnt/sdcard:/mnt/sdcard:ro
@@ -17,7 +14,7 @@ services:
     environment:
       HOMEPAGE_ALLOWED_HOSTS: radxa-e25.tail539c2b.ts.net
       # see docs https://gethomepage.dev/installation/docker/#using-environment-secrets
-      HOMEPAGE_VAR_PORTAINER_API_KEY: ${HOMEPAGE_VAR_PORTAINER_API_KEY}
+      HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY: ${HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}
       HOMEPAGE_VAR_BITWARDEN_URL: ${HOMEPAGE_VAR_BITWARDEN_URL}
     networks:
       - homelab
