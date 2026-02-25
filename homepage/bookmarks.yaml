@@ -2,23 +2,20 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/bookmarks
 
-- edge-ai-11:
-  - Ollama API Endpoit:
-    - icon: ollama.png
-      href: http://edge-ai-11.tail539c2b.ts.net:11434/
-- bachelor-vm-58:
-  - Heimdall:
-    - icon: heimdall.png
-      href: http://bachelor-vm-58.tail539c2b.ts.net/
-  - Netdata:
-    - icon: netdata.png
-      href: http://bachelor-vm-58.tail539c2b.ts.net:19999/
-  - Glances:
-    - icon: glances.png
-      href: http://bachelor-vm-58.tail539c2b.ts.net:61208/
-  - cAdvisor:
-    - icon: cadvisor.png
-      href: http://bachelor-vm-58.tail539c2b.ts.net:18080/
+# - Developer:
+#   - Github:
+#     - abbr: GH
+#       href: https://github.com/
+
+# - Social:
+#   - Reddit:
+#     - abbr: RE
+#       href: https://reddit.com/
+
+# - Entertainment:
+#   - YouTube:
+#     - abbr: YT
+#       href: https://youtube.com/
 
 # Custom links for endpoints without a traditional web UI can be placed
 # here so they are easy to reference. These are not added as Homepage

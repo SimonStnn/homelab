@@ -5,7 +5,7 @@ services:
     image: alpine
     container_name: volume_initializer
     command: |
-      chown -R 1000:1000 /config
+      echo "Initializes and ~locks~ the volumes by creating a file in each. This prevents them from being accidentally deleted when the container is removed."
     volumes:
       - heimdall-config:/config:ro
       - portainer_data:/data:ro
@@ -18,8 +18,6 @@ services:
       - homelab
 
 volumes:
-  heimdall-config:
-    name: heimdall-config
   portainer_data:
     name: portainer_data
   n8n-data:
