@@ -1,18 +1,17 @@
-name: fileserver
+name: filebrowser
 
 services:
   filebrowser:
-    container_name: fileserver
+    container_name: filebrowser
     image: filebrowser/filebrowser:latest
     restart: unless-stopped
+    user: "1000:1000"
     ports:
       - 8080:80
     volumes:
-      - /mnt/sdcard/homelab-volumes/fileserver-data:/database:rw
-      - /mnt/sdcard:/srv:rw
+      - /mnt/sdcard/homelab-volumes/filebrowser-data:/database:rw
+      - /mnt/sdcard/filebrowser-data:/srv:rw
     environment:
-      - PUID=1000
-      - PGID=1000
       - TZ=Europe/Brussels
     networks:
       - homelab
