@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenCode AI Coding Assistant
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/mnt/sdcard/opencode
+ExecStart=/root/.opencode/bin/opencode serve --hostname 0.0.0.0 --port 4096
+Restart=always
+RestartSec=5
+
+Environment=HOME=/root
+
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target
