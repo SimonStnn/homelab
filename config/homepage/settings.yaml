@@ -10,6 +10,7 @@ cardBlur: xs
 showStats: true
 # useEqualHeights: true
 disableIndexing: true
+hideErrors: true
 
 quicklaunch:
   searchDescriptions: true

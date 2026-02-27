@@ -5,7 +5,6 @@
 - Root:
   - Radxa E25:
     - Portainer:
-        icon: portainer.png
         href: https://radxa-e25.tail539c2b.ts.net:9443/
         description: Container Management. Also monitors containers from VIVES VM's
         server: my-docker
@@ -21,8 +20,6 @@
         icon: opencode.png
         href: http://radxa-e25.tail539c2b.ts.net:4096/
         description: Code and AI playground
-        server: my-docker
-        container: opencode-web
         siteMonitor: http://radxa-e25.tail539c2b.ts.net:4096/
     - OpenWebUI:
         icon: open-webui.png
@@ -35,13 +32,6 @@
         icon: openclaw.png
         href: http://openclaw.tail539c2b.ts.net/
         description: OpenClaw service
-    - n8n:
-        icon: n8n.png
-        href: http://radxa-e25.tail539c2b.ts.net:5678/
-        description: Workflow Automation
-        server: my-docker
-        container: n8n
-        siteMonitor: http://radxa-e25.tail539c2b.ts.net:5678/healthz
     - FileBrowser:
         icon: filebrowser.png
         href: http://radxa-e25.tail539c2b.ts.net:8080/
@@ -49,6 +39,11 @@
         server: my-docker
         container: fileserver
         siteMonitor: http://radxa-e25.tail539c2b.ts.net:8080/health
+    - Documentation:
+        icon: mkdocs.png
+        href: http://radxa-e25.tail539c2b.ts.net:7300/
+        description: Homelab Documentation
+        siteMonitor: http://radxa-e25.tail539c2b.ts.net:7300/
 
 
   - VIVES:
@@ -82,11 +77,6 @@
           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
 
 - Home Server:
-  - Homepage:
-      icon: homepage.png
-      href: http://10.250.3.225/
-      description: Self-hosted Dashboard and Service Monitor
-      siteMonitor: http://10.250.3.225/favicon-16x16.png
   - Portainer:
       icon: portainer.png
       href: https://10.250.3.225:9443/
