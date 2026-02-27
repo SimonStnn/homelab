@@ -21,3 +21,13 @@ if ! docker network inspect homelab >/dev/null 2>&1; then
 else
   echo "Docker network 'homelab' already exists"
 fi
+
+# Ensure volume directories have correct ownership for containers running as non-root
+VOLUME_DIR="/mnt/sdcard/homelab-volumes"
+
+for dir in "$VOLUME_DIR"/*; do
+  if [ -d "$dir" ]; then
+    chown -R 1000:1000 "$dir" 2>/dev/null || true
+  fi
+done
+echo "Ensured volume directories have correct ownership (1000:1000)"

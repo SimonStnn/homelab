@@ -28,6 +28,10 @@ Configure on first run via the web interface.
 - `/mnt/sdcard/homelab-volumes/filebrowser-data:/database` - Database storage
 - `/mnt/sdcard/filebrowser-data:/srv` - File browser root directory
 
+## Permissions
+
+The container runs as user ID 1000. Volume directories must be owned by this user. Run `./scripts/setup.sh` after creating new volume directories to ensure correct ownership.
+
 ## Uninstall
 
 ```bash
