@@ -12,7 +12,54 @@ This repository contains configurations for a self-hosted homelab.
 
 # Toggle SD card mount
 ./toggle-sdcard.sh
+
+# Setup OpenCode as systemd service (always-on)
+./scripts/opencode-init.sh
 ```
+
+## Infrastructure
+
+### OpenCode
+
+Run as systemd service for always-on availability:
+
+- Service file: `opencode.service`
+- Init script: `scripts/opencode-init.sh`
+- Documentation: `docs/infrastructure/opencode.md`
+
+```bash
+# Manual commands
+systemctl start opencode
+systemctl stop opencode
+systemctl status opencode
+journalctl -u opencode -f
+```
+
+## Docker Services
+
+### Homepage
+
+Docker Compose: `docker-compose.homepage.yaml`
+- Port: 80
+- Documentation: `docs/services/homepage.md`
+
+### Portainer
+
+Docker Compose: `docker-compose.portainer.yaml`
+- Ports: 9000, 9443
+- Documentation: `docs/services/portainer.md`
+
+### File Browser
+
+Docker Compose: `docker-compose.filebrowser.yaml`
+- Port: 8080
+- Documentation: `docs/services/filebrowser.md`
+
+### Open WebUI
+
+Docker Compose: `docker-compose.openwebui.yaml`
+- Port: 8090
+- Documentation: `docs/services/openwebui.md`
 
 ## Code Style Guidelines
 
@@ -30,10 +77,17 @@ This repository contains configurations for a self-hosted homelab.
 
 - Keep configuration files modular
 - Use comments to explain non-obvious configurations
-- Keep `.env` values out of version control (already in `.gitignore`)
+- Keep `.env` values out of version control
 - Use consistent naming: lowercase with hyphens for filenames
 
-### Git Conventions
+## Documentation
+
+- Write documentation for every feature or service successfully implemented
+- Maintain existing documentation when making changes
+- Use `docs/` directory for documentation files
+- Documentation should cover: installation, configuration, usage, and uninstall steps
+
+## Git Conventions
 
 - Commit messages: short description, blank line, longer explanation if needed
 - Don't commit `.env` files or sensitive data
