@@ -37,7 +37,7 @@
         href: http://radxa-e25.tail539c2b.ts.net:8080/
         description: Web File Manager
         server: my-docker
-        container: fileserver
+        container: filebrowser
         siteMonitor: http://radxa-e25.tail539c2b.ts.net:8080/health
     - Documentation:
         icon: mkdocs.png
@@ -91,6 +91,10 @@
       icon: bitwarden.png
       href: "{{HOMEPAGE_VAR_BITWARDEN_URL}}"
       description: Self-hosted Password Manager
+  - Bitwarden Admin:
+      icon: bitwarden.png
+      href: "{{HOMEPAGE_VAR_BITWARDEN_URL}}/admin"
+      description: Bitwarden Admin Panel
 
 - Projects:
   - Portfolio:

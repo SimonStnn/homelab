@@ -15,14 +15,10 @@ services:
       - /mnt/sdcard/homelab-volumes/portainer:/data:rw
     networks:
       - homelab
+      - portainer_bridge
     ports:
       - 9000:9000
       - 9443:9443
-    # healthcheck:
-    #   test: ['CMD', 'portainer', '--healthcheck']
-    #   interval: 120s
-    #   timeout: 5s
-    #   retries: 3
 
 volumes:
   portainer_data:
@@ -31,3 +27,5 @@ volumes:
 networks:
   homelab:
     external: true
+  portainer_bridge:
+    driver: bridge
