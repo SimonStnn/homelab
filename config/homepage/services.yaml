@@ -147,19 +147,19 @@
         icon: https://signapse.devbitapp.be/favicon.ico
         href: http://gesture-project1.tail539c2b.ts.net/
         description: Signapse Dashboard - Sign language to text
-        siteMonitor: https://api.signapse.devbitapp.be/health
-        statusStyle: "dot"
-        widgets:
-          - type: customapi
-            url: https://api.signapse.devbitapp.be/health
-            mappings:
-              - label: API
-                format: text
-                remap:
-                  - value: 0
-                    to: DOWN
-                  - any: true # will map all other values
-                    to: UP
+        # siteMonitor: https://api.signapse.devbitapp.be/health
+        # statusStyle: "dot"
+        # widgets:
+        #   - type: customapi
+        #     url: https://api.signapse.devbitapp.be/health
+        #     mappings:
+        #       - label: API
+        #         format: text
+        #         remap:
+        #           - value: 0
+        #             to: DOWN
+        #           - any: true # will map all other values
+        #             to: UP
     - K3s Cluster:
         icon: kubernetes.png
         href: http://gesture-project1.tail539c2b.ts.net:9000/
@@ -169,7 +169,7 @@
     - Website:
         icon: https://website-mara-91c43.web.app/favicon.svg
         href: https://website-mara-91c43.web.app/
-        description: Personal Blog and Projects
+        description: Website for my liefje
         siteMonitor: https://website-mara-91c43.web.app/favicon.svg
         statusStyle: "dot"
     - Firebase:
