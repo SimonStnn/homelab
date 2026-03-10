@@ -121,7 +121,11 @@
     - Google Analytics:
         icon: google-analytics.png
         href: https://analytics.google.com/analytics/web/
-        description: Google Analytics for Portfolio  
+        description: Google Analytics for Portfolio
+    - Bing Webmaster Tools:
+        icon: bing.png
+        href: https://www.bing.com/webmasters?tid=512acba5-4a4b-440b-90d9-7c7d7699444d
+        description: Bing Webmaster Tools for Portfolio
 
   - Pop-a-loon:
     - Chrome web store:
