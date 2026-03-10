@@ -44,6 +44,20 @@
         href: https://radxa-e25.tail539c2b.ts.net:7300/
         description: Homelab Documentation
         siteMonitor: https://radxa-e25.tail539c2b.ts.net:7300/
+    - ntfy:
+        icon: ntfy.png
+        href: https://radxa-e25.tail539c2b.ts.net:8085/
+        description: Self-hosted notification server
+        server: my-docker
+        container: ntfy
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:8085/
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: https://radxa-e25.tail539c2b.ts.net:3001/
+        description: Service monitoring
+        server: my-docker
+        container: uptime-kuma
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:3001/
 
 
   - VIVES:

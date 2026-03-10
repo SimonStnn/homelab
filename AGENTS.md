@@ -87,6 +87,16 @@ Docker Compose: `docker-compose.openwebui.yaml`
 - Use `docs/` directory for documentation files
 - Documentation should cover: installation, configuration, usage, and uninstall steps
 
+## Skills
+
+Available skills in `skills/` directory:
+
+- **docker-compose.md** - Manage Docker Compose services (start, stop, restart, logs, stats, prune, inspect)
+- **file-management.md** - File/directory operations (list, size, find, permissions, create-dir, copy, move)
+- **documentation.md** - Passive skill that auto-documents implementations
+- **homepage.md** - Passive skill that auto-adds Homepage widgets for new services
+- **tailscale.md** - Passive skill that auto-configures Tailscale HTTPS serving for new services
+
 ## Git Conventions
 
 - Commit messages: short description, blank line, longer explanation if needed
