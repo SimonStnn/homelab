@@ -18,32 +18,32 @@
             key: "{{HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}}"
     - OpenCode:
         icon: opencode.png
-        href: http://radxa-e25.tail539c2b.ts.net:4096/
+        href: https://radxa-e25.tail539c2b.ts.net:4096/
         description: Code and AI playground
-        siteMonitor: http://radxa-e25.tail539c2b.ts.net:4096/
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:4096/
     - OpenWebUI:
         icon: open-webui.png
-        href: http://radxa-e25.tail539c2b.ts.net:8090/
+        href: https://radxa-e25.tail539c2b.ts.net:8090/
         description: Ollama frontend
         server: my-docker
         container: openwebui
-        siteMonitor: http://radxa-e25.tail539c2b.ts.net:8090/health
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:8090/health
     - OpenClaw:
         icon: openclaw.png
         href: http://openclaw.tail539c2b.ts.net/
         description: OpenClaw service
     - FileBrowser:
         icon: filebrowser.png
-        href: http://radxa-e25.tail539c2b.ts.net:8080/
+        href: https://radxa-e25.tail539c2b.ts.net:8080/
         description: Web File Manager
         server: my-docker
         container: filebrowser
-        siteMonitor: http://radxa-e25.tail539c2b.ts.net:8080/health
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:8080/health
     - Documentation:
         icon: mkdocs.png
-        href: http://radxa-e25.tail539c2b.ts.net:7300/
+        href: https://radxa-e25.tail539c2b.ts.net:7300/
         description: Homelab Documentation
-        siteMonitor: http://radxa-e25.tail539c2b.ts.net:7300/
+        siteMonitor: https://radxa-e25.tail539c2b.ts.net:7300/
 
 
   - VIVES:
