@@ -9,7 +9,7 @@
         description: Container Management. Also monitors containers from VIVES VM's
         server: my-docker
         container: portainer
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:9443/api/system/status
+        siteMonitor: http://host.docker.internal:9000/api/system/status
         widgets:
           - type: portainer
             url: https://radxa-e25.tail539c2b.ts.net:9443
@@ -20,44 +20,42 @@
         icon: opencode.png
         href: https://radxa-e25.tail539c2b.ts.net:4096/
         description: Code and AI playground
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:4096/
+        siteMonitor: http://host.docker.internal:4096/
     - OpenWebUI:
         icon: open-webui.png
         href: https://radxa-e25.tail539c2b.ts.net:8090/
         description: Ollama frontend
         server: my-docker
         container: openwebui
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:8090/health
-    - OpenClaw:
-        icon: openclaw.png
-        href: http://openclaw.tail539c2b.ts.net/
-        description: OpenClaw service
+        siteMonitor: http://host.docker.internal:8090/health
     - FileBrowser:
         icon: filebrowser.png
         href: https://radxa-e25.tail539c2b.ts.net:8080/
         description: Web File Manager
         server: my-docker
         container: filebrowser
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:8080/health
+        siteMonitor: http://host.docker.internal:8080/health
     - Documentation:
         icon: mkdocs.png
         href: https://radxa-e25.tail539c2b.ts.net:7300/
         description: Homelab Documentation
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:7300/
+        server: my-docker
+        container: docs
+        siteMonitor: http://host.docker.internal:7300/
     - ntfy:
         icon: ntfy.png
         href: https://radxa-e25.tail539c2b.ts.net:8085/
         description: Self-hosted notification server
         server: my-docker
         container: ntfy
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:8085/
+        siteMonitor: http://host.docker.internal:8085/
     - Uptime Kuma:
         icon: uptime-kuma.png
         href: https://radxa-e25.tail539c2b.ts.net:3001/
         description: Service monitoring
         server: my-docker
         container: uptime-kuma
-        siteMonitor: https://radxa-e25.tail539c2b.ts.net:3001/
+        siteMonitor: http://host.docker.internal:3001/
 
 
   - VIVES:

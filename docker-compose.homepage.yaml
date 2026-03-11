@@ -16,6 +16,8 @@ services:
       # see docs https://gethomepage.dev/installation/docker/#using-environment-secrets
       HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY: ${HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}
       HOMEPAGE_VAR_BITWARDEN_URL: ${HOMEPAGE_VAR_BITWARDEN_URL}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - homelab
 
