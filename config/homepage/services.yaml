@@ -56,6 +56,13 @@
         server: my-docker
         container: uptime-kuma
         siteMonitor: http://host.docker.internal:3001/
+    - Obsidian:
+        icon: obsidian.png
+        href: https://radxa-e25.tail539c2b.ts.net:3010/
+        description: Note-taking and knowledge base
+        server: my-docker
+        container: obsidian
+        siteMonitor: http://host.docker.internal:3010/
 
 
   - VIVES:

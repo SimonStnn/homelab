@@ -27,6 +27,9 @@ tailscale serve --bg --https=7300 http://localhost:7300
 # OpenCode → https://radxa-e25.tail539c2b.ts.net:4096
 tailscale serve --bg --https=4096 http://localhost:4096
 
+# Obsidian → https://radxa-e25.tail539c2b.ts.net:3010
+tailscale serve --bg --https=3010 http://localhost:3010
+
 echo ""
 echo "Done. Current config:"
 tailscale serve status

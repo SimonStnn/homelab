@@ -1,0 +1,29 @@
+name: obsidian
+
+services:
+  obsidian:
+    container_name: obsidian
+    image: lscr.io/linuxserver/obsidian:latest
+    restart: unless-stopped
+    ports:
+      - 3010:3000
+    volumes:
+      - /mnt/sdcard/homelab-volumes/obsidian:/config:rw
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      - homelab
+    security_opt:
+      - seccomp=unconfined
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 120s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  homelab:
+    external: true
