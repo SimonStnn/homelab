@@ -27,6 +27,12 @@ tailscale serve --bg --https=7300 http://localhost:7300
 # OpenCode → https://radxa-e25.tail539c2b.ts.net:4096
 tailscale serve --bg --https=4096 http://localhost:4096
 
+# ntfy → https://radxa-e25.tail539c2b.ts.net:8085
+tailscale serve --bg --https=8085 http://localhost:8085
+
+# Uptime Kuma → https://radxa-e25.tail539c2b.ts.net:3001
+tailscale serve --bg --https=3001 http://localhost:3001
+
 echo ""
 echo "Done. Current config:"
 tailscale serve status

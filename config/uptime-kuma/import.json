@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "notifications": [
+    {
+      "name": "ntfy",
+      "type": "ntfy",
+      "ntfyServerURL": "http://ntfy:80",
+      "ntfyTopic": "uptime-alerts",
+      "ntfyPriority": 3,
+      "isDefault": true
+    }
+  ]
+}

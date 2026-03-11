@@ -28,6 +28,8 @@ This skill runs **passively** - it monitors for new docker-compose services and 
 | 9000 | 9000 | portainer |
 | 7300 | 7300 | docs |
 | 4096 | 4096 | opencode |
+| 8085 | 8085 | ntfy |
+| 3001 | 3001 | uptime-kuma |
 
 ## Commands
 
