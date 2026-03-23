@@ -22,6 +22,22 @@ else
   echo "Docker network 'homelab' already exists"
 fi
 
+# Parse options
+declare START_ALL=false
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --start-all|-s)
+      START_ALL=true
+      shift
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      echo "Usage: $0 [--start-all|-s]" >&2
+      exit 1
+      ;;
+  esac
+done
+
 # Ensure volume directories have correct ownership for containers running as non-root
 VOLUME_DIR="/mnt/sdcard/homelab-volumes"
 
@@ -31,3 +47,15 @@ for dir in "$VOLUME_DIR"/*; do
   fi
 done
 echo "Ensured volume directories have correct ownership (1000:1000)"
+
+# Start all docker-compose services if requested
+if [ "$START_ALL" = true ]; then
+  echo "Starting all docker-compose services..."
+  for compose_file in /opt/docker/docker-compose.*.yaml; do
+    if [ -f "$compose_file" ]; then
+      echo "Bringing up $compose_file"
+      docker compose -f "$compose_file" up -d
+    fi
+  done
+  echo "All services started"
+fi
