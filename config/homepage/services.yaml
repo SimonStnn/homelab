@@ -103,6 +103,7 @@
       icon: bitwarden.png
       href: "{{HOMEPAGE_VAR_BITWARDEN_URL}}"
       description: Self-hosted Password Manager
+      siteMonitor: "{{HOMEPAGE_VAR_BITWARDEN_URL}}/alive"
   - Bitwarden Admin:
       icon: bitwarden.png
       href: "{{HOMEPAGE_VAR_BITWARDEN_URL}}/admin"
