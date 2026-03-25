@@ -57,36 +57,53 @@
         container: uptime-kuma
         siteMonitor: http://host.docker.internal:3001/
 
+  - Tailscale:
+    - Tailscale Network:
+        icon: tailscale.png
+        href: https://login.tailscale.com/admin/machines
+        description: All Tailscale devices on the Tailnet
+        widget:
+          type: customapi
+          url: https://api.tailscale.com/api/v2/tailnet/-/devices
+          headers:
+            Authorization: "Bearer {{HOMEPAGE_VAR_TAILSCALE_API_KEY}}"
+          display: dynamic-list
+          mappings:
+            items: devices
+            name: name
+            label: lastSeen
+            format: date
+            target: https://tailscale.com/admin/machines/{addresses.0}
 
-  - VIVES:
-    - Edge AI 11:
-      - Ollama API Endpoint:
-          icon: ollama.png
-          href: http://edge-ai-11.tail539c2b.ts.net:11434/
-          description: Ollama API for LLM hosting
-          siteMonitor: http://edge-ai-11.tail539c2b.ts.net:11434/
+#   - VIVES:
+#     - Edge AI 11:
+#       - Ollama API Endpoint:
+#           icon: ollama.png
+#           href: http://edge-ai-11.tail539c2b.ts.net:11434/
+#           description: Ollama API for LLM hosting
+#           siteMonitor: http://edge-ai-11.tail539c2b.ts.net:11434/
 
-    - Bachelor VM 58:
-      - Heimdall:
-          icon: heimdall.png
-          href: http://bachelor-vm-58.tail539c2b.ts.net/
-          description: Service Dashboard
-          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net/health
-      - Netdata:
-          icon: netdata.png
-          href: http://bachelor-vm-58.tail539c2b.ts.net:19999/
-          description: System Monitoring
-          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:19999/api/v1/info
-      - Glances:
-          icon: glances.png
-          href: http://bachelor-vm-58.tail539c2b.ts.net:61208/
-          description: System Monitoring
-          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:61208/api/4/status
-      - cAdvisor:
-          icon: cadvisor.png
-          href: http://bachelor-vm-58.tail539c2b.ts.net:18080/
-          description: Container Monitoring
-          siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
+#     - Bachelor VM 58:
+#       - Heimdall:
+#           icon: heimdall.png
+#           href: http://bachelor-vm-58.tail539c2b.ts.net/
+#           description: Service Dashboard
+#           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net/health
+#       - Netdata:
+#           icon: netdata.png
+#           href: http://bachelor-vm-58.tail539c2b.ts.net:19999/
+#           description: System Monitoring
+#           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:19999/api/v1/info
+#       - Glances:
+#           icon: glances.png
+#           href: http://bachelor-vm-58.tail539c2b.ts.net:61208/
+#           description: System Monitoring
+#           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:61208/api/4/status
+#       - cAdvisor:
+#           icon: cadvisor.png
+#           href: http://bachelor-vm-58.tail539c2b.ts.net:18080/
+#           description: Container Monitoring
+#           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
 
 - Home Server:
   - Portainer:
