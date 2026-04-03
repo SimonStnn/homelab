@@ -18,8 +18,9 @@ tailscale serve --bg --https=8080 http://localhost:8080
 # OpenWebUI → https://radxa-e25.tail539c2b.ts.net:8090
 tailscale serve --bg --https=8090 http://localhost:8090
 
-# Portainer → https://radxa-e25.tail539c2b.ts.net:9000
-tailscale serve --bg --https=9000 http://localhost:9000
+# Portainer exposes 9443 for HTTPS
+# Portainer → https://radxa-e25.tail539c2b.ts.net:9443
+tailscale serve --bg --https=9443 http://localhost:9443
 
 # Docs → https://radxa-e25.tail539c2b.ts.net:7300
 tailscale serve --bg --https=7300 http://localhost:7300

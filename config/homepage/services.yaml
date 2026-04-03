@@ -106,6 +106,10 @@
 #           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
 
 - Home Server:
+  - Homepage:
+      icon: homepage.png
+      href: http://10.250.3.225/
+      siteMonitor: http://10.250.3.225/favicon-16x16.png?v=4
   - Portainer:
       icon: portainer.png
       href: https://10.250.3.225:9443/
