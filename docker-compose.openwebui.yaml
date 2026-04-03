@@ -11,7 +11,7 @@ services:
       - TZ=Europe/Brussels
       - OLLAMA_BASE_URL=http://edge-ai-11.tail539c2b.ts.net:11434
     volumes:
-      - /mnt/sdcard/homelab-volumes/open-webui:/app/backend/data:rw
+      - ${HOMELAB_VOLUMES}/open-webui:/app/backend/data:rw
     networks:
       - homelab
     healthcheck:

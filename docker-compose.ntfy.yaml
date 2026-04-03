@@ -9,7 +9,7 @@ services:
     environment:
       - TZ=Europe/Brussels
     volumes:
-      - /mnt/sdcard/homelab-volumes/ntfy:/data:rw
+      - ${HOMELAB_VOLUMES}/ntfy:/data:rw
     ports:
       - 8085:80
     networks:

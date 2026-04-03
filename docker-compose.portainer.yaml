@@ -12,7 +12,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /mnt/sdcard/homelab-volumes/portainer:/data:rw
+      - ${HOMELAB_VOLUMES}/portainer:/data:rw
     networks:
       - homelab
       - portainer_bridge
