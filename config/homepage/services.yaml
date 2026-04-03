@@ -4,6 +4,17 @@
 
 - Root:
   - Radxa E25:
+    - Proxmox VE:
+        icon: proxmox.png
+        href: https://10.250.3.220:8006/
+        description: Proxmox VE Dashboard
+        siteMonitor: https://10.250.3.220:8006/api2/json/nodes
+        widget:
+          type: proxmox
+          url: https://10.250.3.220:8006
+          username: {{HOMEPAGE_VAR_PROXMOX_TOKEN_ID}}
+          password: {{HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}}
+        #   node: pve-1 # optional
     - Portainer:
         href: https://radxa-e25.tail539c2b.ts.net:9443/
         description: Container Management. Also monitors containers from VIVES VM's
@@ -15,7 +26,7 @@
             url: https://radxa-e25.tail539c2b.ts.net:9443
             env: 3 # Local
             # kubernetes: true # optional, defaults to false
-            key: "{{HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}}"
+            key: {{HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}}
     - OpenCode:
         icon: opencode.png
         href: https://radxa-e25.tail539c2b.ts.net:4096/

@@ -3,3 +3,8 @@
 #   url: https://proxmox.host.or.ip:8006
 #   token: username@pam!Token ID
 #   secret: secret
+
+pve:
+  url: https://10.250.3.220:8006
+  token: {{HOMEPAGE_VAR_PROXMOX_TOKEN_ID}}
+  secret: {{HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}}

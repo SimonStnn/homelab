@@ -9,14 +9,16 @@ services:
       - 80:3000
     volumes:
       - ./config/homepage:/app/config:rw
-      - /mnt/sdcard:/mnt/sdcard:ro
+      # - /mnt/sdcard:/mnt/sdcard:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      HOMEPAGE_ALLOWED_HOSTS: radxa-e25.tail539c2b.ts.net
+      HOMEPAGE_ALLOWED_HOSTS: ${HOMEPAGE_ALLOWED_HOSTS}
       # see docs https://gethomepage.dev/installation/docker/#using-environment-secrets
       HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY: ${HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}
       HOMEPAGE_VAR_BITWARDEN_URL: ${HOMEPAGE_VAR_BITWARDEN_URL}
       HOMEPAGE_VAR_TAILSCALE_API_KEY: ${HOMEPAGE_VAR_TAILSCALE_API_KEY}
+      HOMEPAGE_VAR_PROXMOX_TOKEN_ID: ${HOMEPAGE_VAR_PROXMOX_TOKEN_ID}
+      HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET: ${HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:

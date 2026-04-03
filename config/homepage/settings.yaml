@@ -26,6 +26,7 @@ layout:
     columns: 2
     disableCollapse: true
     "Radxa E25":
+      header: false
       style: row
       columns: 2
       useEqualHeights: true

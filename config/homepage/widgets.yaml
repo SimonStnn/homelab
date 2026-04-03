@@ -14,7 +14,7 @@
     label: Storage
     disk:
       - /
-      - /mnt/sdcard
+    #   - /mnt/sdcard
     expanded: true
 
 - datetime:
