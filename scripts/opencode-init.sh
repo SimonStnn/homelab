@@ -3,13 +3,13 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SERVICE_FILE="$SCRIPT_DIR/../opencode.service"
+SERVICE_FILE="$SCRIPT_DIR/opencode.service"
 SYSTEMD_DIR="/etc/systemd/system"
 
 echo "Setting up OpenCode systemd service..."
 
-if [ ! -f "$SERVICE_FILE  echo "Error: Service file not" ]; then
- found at $SERVICE_FILE"
+if [ ! -f "$SERVICE_FILE" ]; then
+  echo "Error: Service file not found at $SERVICE_FILE"
   exit 1
 fi
 

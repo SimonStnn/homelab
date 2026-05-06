@@ -27,8 +27,8 @@ layout:
     disableCollapse: true
     "Radxa E25":
       header: false
-      style: row
-      columns: 2
+      # style: row
+      # columns: 1
       useEqualHeights: true
       disableCollapse: true
     "VIVES":
@@ -44,6 +44,10 @@ layout:
         style: row
         columns: 2
         disableCollapse: true
+  "Home Server PVE":
+    style: row
+    columns: 5
+    disableCollapse: true
   "Home Server":
     style: row
     columns: 5

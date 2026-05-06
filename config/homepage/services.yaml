@@ -3,7 +3,7 @@
 # https://gethomepage.dev/configs/services/
 
 - Root:
-  - Radxa E25:
+  - Homelab PVE:
     - Proxmox VE:
         icon: proxmox.png
         href: https://10.250.3.220:8006/
@@ -32,41 +32,6 @@
         href: https://radxa-e25.tail539c2b.ts.net:4096/
         description: Code and AI playground
         siteMonitor: http://host.docker.internal:4096/
-    - OpenWebUI:
-        icon: open-webui.png
-        href: https://radxa-e25.tail539c2b.ts.net:8090/
-        description: Ollama frontend
-        server: my-docker
-        container: openwebui
-        siteMonitor: http://host.docker.internal:8090/health
-    - FileBrowser:
-        icon: filebrowser.png
-        href: https://radxa-e25.tail539c2b.ts.net:8080/
-        description: Web File Manager
-        server: my-docker
-        container: filebrowser
-        siteMonitor: http://host.docker.internal:8080/health
-    - Documentation:
-        icon: mkdocs.png
-        href: https://radxa-e25.tail539c2b.ts.net:7300/
-        description: Homelab Documentation
-        server: my-docker
-        container: docs
-        siteMonitor: http://host.docker.internal:7300/
-    - ntfy:
-        icon: ntfy.png
-        href: https://radxa-e25.tail539c2b.ts.net:8085/
-        description: Self-hosted notification server
-        server: my-docker
-        container: ntfy
-        siteMonitor: http://host.docker.internal:8085/
-    - Uptime Kuma:
-        icon: uptime-kuma.png
-        href: https://radxa-e25.tail539c2b.ts.net:3001/
-        description: Service monitoring
-        server: my-docker
-        container: uptime-kuma
-        siteMonitor: http://host.docker.internal:3001/
 
   - Tailscale:
     - Tailscale Network:
@@ -116,6 +81,12 @@
 #           description: Container Monitoring
 #           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
 
+- Home Server PVE:
+  - Dockge:
+      icon: dockge.png
+      href: https://10.250.3.222:5001/
+      description: Docker GUI for Home Server
+      # siteMonitor: https://10.250.3.222:5001/api/v1.0/containers/json
 - Home Server:
   - Homepage:
       icon: homepage.png
