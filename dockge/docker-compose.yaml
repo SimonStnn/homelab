@@ -1,0 +1,21 @@
+# https://dockge.kuma.pet/
+
+services:
+  dockge:
+    container_name: dockge
+    image: louislam/dockge:1
+    restart: unless-stopped
+    ports:
+      - 5001:5001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/app/data
+      - /opt/docker:/opt/docker
+    environment:
+      - DOCKGE_STACKS_DIR=/opt/docker
+      - DOCKGE_ENABLE_CONSOLE=false
+    networks:
+      - pve-local
+networks:
+  pve-local:
+    external: true

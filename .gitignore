@@ -1,3 +1,66 @@
+# General Editor / OS artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# Environment files and secrets
 .env
-config/homepage/logs/
+.env.*
+*.local
+
+# Node/npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Docker / compose local overrides
+docker-compose.override.yml
 docker-compose.override.yaml
+
+# Local data directories / generated runtime data
+/dockge/data/
+/uptime-kuma/uptime-kuma-data/
+/homarr/homarr/appdata/
+
+# Local database files
+/dockge/data/*.db*
+/uptime-kuma/uptime-kuma-data/*.db*
+
+# Local runtime artifacts
+/uptime-kuma/uptime-kuma-data/screenshots/
+/uptime-kuma/uptime-kuma-data/upload/
+/uptime-kuma/uptime-kuma-data/docker-tls/
+
+# Local config/state files that should not be committed
+/dockge/data/db-config.json
+/uptime-kuma/uptime-kuma-data/db-config.json
+
+# Logs
+*.log
+logs/
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*.pid
+*.seed
+
+# Terraform state
+*.tfstate
+*.tfstate.backup
+
+# IDE / Editor
+*.code-workspace
+.vscode/
+
+# Optional: ignore macOS Icon files
+Icon?

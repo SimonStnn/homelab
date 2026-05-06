@@ -1,5 +1,4 @@
 name: homepage
-
 services:
   homepage:
     container_name: homepage
@@ -8,22 +7,19 @@ services:
     ports:
       - 80:3000
     volumes:
-      - ./config/homepage:/app/config:rw
-      # - /mnt/sdcard:/mnt/sdcard:ro
+      - ./homepage-config:/app/config:rw
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       HOMEPAGE_ALLOWED_HOSTS: ${HOMEPAGE_ALLOWED_HOSTS}
-      # see docs https://gethomepage.dev/installation/docker/#using-environment-secrets
       HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY: ${HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}
       HOMEPAGE_VAR_BITWARDEN_URL: ${HOMEPAGE_VAR_BITWARDEN_URL}
       HOMEPAGE_VAR_TAILSCALE_API_KEY: ${HOMEPAGE_VAR_TAILSCALE_API_KEY}
       HOMEPAGE_VAR_PROXMOX_TOKEN_ID: ${HOMEPAGE_VAR_PROXMOX_TOKEN_ID}
       HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET: ${HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - host.docker.internal:host-gateway
     networks:
-      - homelab
-
+      - pve-local
 networks:
-  homelab:
+  pve-local:
     external: true
