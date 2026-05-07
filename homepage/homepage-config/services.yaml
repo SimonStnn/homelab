@@ -5,8 +5,9 @@
 - Root:
   - Homelab PVE:
     - Proxmox VE:
-        icon: proxmox.png
-        href: https://10.250.3.220:8006/
+        icon: proxmox.svg
+        # href: https://10.250.3.220:8006/
+        href: https://proxmox.lab/
         description: Proxmox VE Dashboard
         siteMonitor: https://10.250.3.220:8006/api2/json/nodes
         widget:
@@ -15,21 +16,36 @@
           username: {{HOMEPAGE_VAR_PROXMOX_TOKEN_ID}}
           password: {{HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}}
         #   node: pve-1 # optional
+    - Pi-Hole:
+        icon: pi-hole.svg
+        href: https://dns.lab/admin/
+        description: Network-wide ad blocker & DNS server
+        siteMonitor: https://dns.lab/admin/img/favicons/favicon-16x16.png
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager.svg
+        href: https://proxy.lab/
+        description: Reverse proxy management dashboard
+        siteMonitor: https://proxy.lab/api/
+        widget:
+          type: npm
+          url: https://proxy.lab/
+          username: admin@admin.net
+          password: jL3JP7Q!588*v3^d
     - Dockge:
-        icon: dockge.png
-        href: http://10.20.30.100:5001/
+        icon: dockge.svg
+        href: https://dockge.lab/
         description: Docker GUI for Home Server
-        siteMonitor: http://10.20.30.100:5001/status
+        siteMonitor: https://dockge.lab/status
     - Uptime Kuma:
-        icon: uptime-kuma.png
-        href: http://10.20.30.100:3001/
+        icon: uptime-kuma.svg
+        href: https://kuma.lab/
         description: Uptime monitoring dashboard
-        siteMonitor: http://10.20.30.100:3001/health
+        siteMonitor: https://kuma.lab/health
     - cAdvisor:
         icon: cadvisor.png
-        href: http://10.20.30.100:8080/
+        href: https://cadvisor.lab/
         description: Container Monitoring
-        siteMonitor: http://10.20.30.100:8080/healthz
+        siteMonitor: https://cadvisor.lab/healthz
 
   - Tailscale:
     - Tailscale Network:
