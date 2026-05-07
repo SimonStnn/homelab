@@ -44,6 +44,14 @@ layout:
         style: row
         columns: 2
         disableCollapse: true
+  "Status":
+    header: false
+    style: row
+    columns: 3
+    disableCollapse: true
+    "Uptime":
+      style: row
+      columns: 1
   "Home Server":
     style: row
     columns: 5

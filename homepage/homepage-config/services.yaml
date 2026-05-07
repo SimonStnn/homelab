@@ -99,6 +99,17 @@
 #           href: http://bachelor-vm-58.tail539c2b.ts.net:18080/
 #           description: Container Monitoring
 #           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
+- Status:
+  - Uptime:
+      icon: uptime-kuma.svg
+      href: https://kuma.lab/status/stijnen
+      description: Uptime Kuma instance monitoring all my projects
+      siteMonitor: https://kuma.lab/health
+      widgets:
+        - type: uptimekuma
+          url: https://kuma.lab/
+          slug: stijnen
+
 
 - Home Server:
   - Homepage:
