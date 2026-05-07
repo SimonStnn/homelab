@@ -49,7 +49,7 @@
 
   - Tailscale:
     - Tailscale Network:
-        icon: tailscale.png
+        icon: tailscale.svg
         href: https://login.tailscale.com/admin/machines
         description: All Tailscale devices on the Tailnet
         widget:
@@ -101,22 +101,22 @@
       href: http://10.250.3.225/
       siteMonitor: http://10.250.3.225/favicon-16x16.png?v=4
   - Portainer:
-      icon: portainer.png
+      icon: portainer.svg
       href: https://10.250.3.225:9443/
       description: Container Management
       siteMonitor: https://10.250.3.225:9443/api/system/status
   - Gitea:
-      icon: gitea.png
+      icon: gitea.svg
       href: https://git.stijnen.be/
       description: Self-hosted Git service
       siteMonitor: https://git.stijnen.be/api/v1/version
   - Bitwarden:
-      icon: bitwarden.png
+      icon: bitwarden.svg
       href: "{{HOMEPAGE_VAR_BITWARDEN_URL}}"
       description: Self-hosted Password Manager
       siteMonitor: "{{HOMEPAGE_VAR_BITWARDEN_URL}}/alive"
   - Bitwarden Admin:
-      icon: bitwarden.png
+      icon: bitwarden.svg
       href: "{{HOMEPAGE_VAR_BITWARDEN_URL}}/admin"
       description: Bitwarden Admin Panel
 
@@ -127,37 +127,37 @@
         href: https://simon.stijnen.be/
         description: Personal Portfolio Website
     - Documentation:
-        icon: mkdocs.png
+        icon: mkdocs.svg
         href: https://docs.simon.stijnen.be/
         description: Personal Portfolio Documentation
     - GitHub:
-        icon: github.png
+        icon: github.svg
         href: https://github.com/SimonStnn/website/
         description: GitHub Repository Portfolio
     - Vercel:
-        icon: vercel.png
+        icon: vercel.svg
         href: https://vercel.com/simonstnns-projects/website/
         description: Vercel Portfolio Project
     - Search Console:
-        icon: google-search-console.png
+        icon: google-search-console.svg
         href: https://search.google.com/search-console/
         description: Google Search Console for Portfolio
     - Google Analytics:
-        icon: google-analytics.png
+        icon: google-analytics.svg
         href: https://analytics.google.com/analytics/web/
         description: Google Analytics for Portfolio
     - Bing Webmaster Tools:
-        icon: bing.png
+        icon: bing.svg
         href: https://www.bing.com/webmasters?tid=512acba5-4a4b-440b-90d9-7c7d7699444d
         description: Bing Webmaster Tools for Portfolio
 
   - Pop-a-loon:
     - Chrome web store:
-        icon: chrome.png
+        icon: chrome.svg
         href: https://chromewebstore.google.com/detail/.../pahcoancbdjmffpmfbnjablnabomdocp
         description: Pop-a-loon Store Listing — Chrome Web Store
     - Firefox add-ons:
-        icon: firefox.png
+        icon: firefox.svg
         href: https://addons.mozilla.org/en-US/firefox/addon/pop-a-loon
         description: Pop-a-loon Store Listing — Firefox Add-ons
     - Pop-a-loon API:
@@ -166,7 +166,7 @@
         description: Pop-a-loon API
         siteMonitor: https://pop-a-loon.stijnen.be/api/health
     - MongoDB Atlas:
-        icon: mongodb.png
+        icon: mongodb.svg
         href: https://cloud.mongodb.com/v2/65f9ed2a9ccb1477701f0583#/clusters
         description: Pop-a-loon Database Viewer
 
@@ -189,7 +189,7 @@
         #           - any: true # will map all other values
         #             to: UP
     - K3s Cluster:
-        icon: kubernetes.png
+        icon: kubernetes.svg
         href: http://gesture-project1.tail539c2b.ts.net:9000/
         description: Portainer view of K3s cluster running Signapse services
 
@@ -201,7 +201,7 @@
         siteMonitor: https://website-mara-91c43.web.app/favicon.svg
         statusStyle: "dot"
     - Firebase:
-        icon: firebase.png
+        icon: firebase.svg
         href: https://console.firebase.google.com/u/0/project/website-mara-91c43/overview
         description: Firebase Console for Website Mara — Hosting platform and database management
 
@@ -223,11 +223,11 @@
 
   - Packages:
     - GO Package 'iseven':
-        icon: go.png
+        icon: go.svg
         href: https://pkg.go.dev/github.com/SimonStnn/iseven
         description: Go package for checking if a number is even
     - GO Package 'isodd':
-        icon: go.png
+        icon: go.svg
         href: https://pkg.go.dev/github.com/SimonStnn/isodd
         description: Go package for checking if a number is odd
     - NuGet Package 'SimonStnn.Fractions':
@@ -235,6 +235,6 @@
         href: https://www.nuget.org/packages/SimonStnn.Fractions
         description: NuGet package for fraction operations in C#
     - smart_gestures:
-        icon: pypi.png
+        icon: pypi.svg
         href: https://pypi.org/project/smart_gestures/
         description: AI models used in the Signapse project
