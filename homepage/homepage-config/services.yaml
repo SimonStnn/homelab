@@ -46,6 +46,11 @@
         href: https://cadvisor.lab/
         description: Container Monitoring
         siteMonitor: https://cadvisor.lab/healthz
+    - Nextcloud:
+        icon: nextcloud.svg
+        href: https://nextcloud.lab/
+        description: Self-hosted cloud storage
+        siteMonitor: https://nextcloud.lab/heartbeat
 
   - Tailscale:
     - Tailscale Network:
