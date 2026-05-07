@@ -15,23 +15,21 @@
           username: {{HOMEPAGE_VAR_PROXMOX_TOKEN_ID}}
           password: {{HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}}
         #   node: pve-1 # optional
-    - Portainer:
-        href: https://radxa-e25.tail539c2b.ts.net:9443/
-        description: Container Management. Also monitors containers from VIVES VM's
-        server: my-docker
-        container: portainer
-        siteMonitor: http://host.docker.internal:9000/api/system/status
-        widgets:
-          - type: portainer
-            url: https://radxa-e25.tail539c2b.ts.net:9443
-            env: 3 # Local
-            # kubernetes: true # optional, defaults to false
-            key: {{HOMEPAGE_VAR_RADXA_PORTAINER_API_KEY}}
-    - OpenCode:
-        icon: opencode.png
-        href: https://radxa-e25.tail539c2b.ts.net:4096/
-        description: Code and AI playground
-        siteMonitor: http://host.docker.internal:4096/
+    - Dockge:
+        icon: dockge.png
+        href: http://10.20.30.100:5001/
+        description: Docker GUI for Home Server
+        siteMonitor: http://10.20.30.100:5001/status
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://10.20.30.100:3001/
+        description: Uptime monitoring dashboard
+        siteMonitor: http://10.20.30.100:3001/health
+    - cAdvisor:
+        icon: cadvisor.png
+        href: http://10.20.30.100:8080/
+        description: Container Monitoring
+        siteMonitor: http://10.20.30.100:8080/healthz
 
   - Tailscale:
     - Tailscale Network:
@@ -81,12 +79,6 @@
 #           description: Container Monitoring
 #           siteMonitor: http://bachelor-vm-58.tail539c2b.ts.net:18080/api/v1.3/subcontainers
 
-- Home Server PVE:
-  - Dockge:
-      icon: dockge.png
-      href: https://10.250.3.222:5001/
-      description: Docker GUI for Home Server
-      # siteMonitor: https://10.250.3.222:5001/api/v1.0/containers/json
 - Home Server:
   - Homepage:
       icon: homepage.png

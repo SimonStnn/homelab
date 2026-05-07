@@ -44,10 +44,6 @@ layout:
         style: row
         columns: 2
         disableCollapse: true
-  "Home Server PVE":
-    style: row
-    columns: 5
-    disableCollapse: true
   "Home Server":
     style: row
     columns: 5
