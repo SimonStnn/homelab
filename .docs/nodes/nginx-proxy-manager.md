@@ -30,17 +30,17 @@ On this page, you will find documentation for the Nginx Proxy Manager node in th
 
 ## Proxy Hosts
 
-| Proxy Host                               | Scheme | Forwarded Hostname/IP | Forwarded Port |     Websockets     | SSL            |     Force SSL      | Access | Notes                              |
-| ---------------------------------------- | :----: | --------------------: | -------------: | :----------------: | -------------- | :----------------: | ------ | :--------------------------------- |
-| [`cadvisor.lab`](https://cadvisor.lab)   |  http  |        `10.20.30.100` |         `8080` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`dashboard.lab`](https://dashboard.lab) |  http  |        `10.20.30.100` |           `80` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`home.lab`](https://home.lab)           |  http  |        `10.20.30.100` |           `80` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`dns.lab`](https://dns.lab)             | https  |          `10.20.30.5` |          `443` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`dockge.lab`](https://dockge.lab)       |  http  |        `10.20.30.100` |         `5001` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`kuma.lab`](https://kuma.lab)           |  http  |        `10.20.30.100` |         `3001` | :heavy_check_mark: | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`nextcloud.lab`](https://nextcloud.lab) |  http  |        `10.20.30.100` |         `8888` | :heavy_check_mark: | `"*.lab" cert` | :heavy_check_mark: | Public | Set proxy headers in custom rules. |
-| [`proxmox.lab`](https://proxmox.lab)     | https  |          `10.20.30.1` |         `8006` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
-| [`proxy.lab`](https://proxy.lab)         |  http  |         `10.20.30.10` |           `81` |        :x:         | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| Proxy Host                               | Scheme | Forwarded Hostname/IP | Forwarded Port | Websockets | SSL            |     Force SSL      | Access | Notes                              |
+| ---------------------------------------- | :----: | --------------------: | -------------: | :--------: | -------------- | :----------------: | ------ | :--------------------------------- |
+| [`cadvisor.lab`](https://cadvisor.lab)   |  http  |        `10.20.30.100` |         `8080` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`dashboard.lab`](https://dashboard.lab) |  http  |        `10.20.30.100` |           `80` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`home.lab`](https://home.lab)           |  http  |        `10.20.30.100` |           `80` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`dns.lab`](https://dns.lab)             | https  |          `10.20.30.5` |          `443` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`dockge.lab`](https://dockge.lab)       |  http  |        `10.20.30.100` |         `5001` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`kuma.lab`](https://kuma.lab)           |  http  |        `10.20.30.100` |         `3001` |     ✔️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`nextcloud.lab`](https://nextcloud.lab) |  http  |        `10.20.30.100` |         `8888` |     ✔️     | `"*.lab" cert` | :heavy_check_mark: | Public | Set proxy headers in custom rules. |
+| [`proxmox.lab`](https://proxmox.lab)     | https  |          `10.20.30.1` |         `8006` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
+| [`proxy.lab`](https://proxy.lab)         |  http  |         `10.20.30.10` |           `81` |     ✖️     | `"*.lab" cert` | :heavy_check_mark: | Public |                                    |
 
 ## Certificates
 

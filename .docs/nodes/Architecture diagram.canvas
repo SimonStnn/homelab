@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"75071e298e066fb3","x":80,"y":-760,"width":400,"height":440,"type":"file","file":"nodes/tailscale-gateway.md"},
+		{"id":"8a9f0e825a432ef1","x":-440,"y":-200,"width":400,"height":400,"type":"file","file":"nodes/pi-hole.md"},
+		{"id":"dcc921287ee83233","x":600,"y":-200,"width":400,"height":400,"type":"file","file":"nodes/nginx-proxy-manager.md"},
+		{"id":"6d4c1d6906c68852","x":80,"y":400,"width":400,"height":400,"type":"file","file":"nodes/server.md"},
+		{"id":"be6965c15f33cc51","x":-320,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/dockge.md"},
+		{"id":"1e42bb494ed035c7","x":120,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/homepage.md"},
+		{"id":"aaa0b309d78592ef","x":-760,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/cadvisor.md"},
+		{"id":"9720dc494ede95c3","x":560,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/nextcloud.md"},
+		{"id":"86fcfa93612d8200","x":1000,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/uptime-kuma.md"}
+	],
+	"edges":[
+		{"id":"5aa8ecaab735026e","fromNode":"75071e298e066fb3","fromSide":"bottom","toNode":"8a9f0e825a432ef1","toSide":"top","fromEnd":"arrow"},
+		{"id":"12f44c65e15f9fd0","fromNode":"75071e298e066fb3","fromSide":"bottom","toNode":"dcc921287ee83233","toSide":"top","fromEnd":"arrow"},
+		{"id":"2a08811798b0642c","fromNode":"6d4c1d6906c68852","fromSide":"top","toNode":"dcc921287ee83233","toSide":"bottom","fromEnd":"arrow"},
+		{"id":"074090471bfbcbc4","fromNode":"6d4c1d6906c68852","fromSide":"top","toNode":"8a9f0e825a432ef1","toSide":"bottom","fromEnd":"arrow"},
+		{"id":"497298191e42d7e9","fromNode":"aaa0b309d78592ef","fromSide":"top","toNode":"6d4c1d6906c68852","toSide":"bottom"},
+		{"id":"c927adb2fdf6aa8e","fromNode":"be6965c15f33cc51","fromSide":"top","toNode":"6d4c1d6906c68852","toSide":"bottom"},
+		{"id":"5a269418eec2cc30","fromNode":"9720dc494ede95c3","fromSide":"top","toNode":"6d4c1d6906c68852","toSide":"bottom"},
+		{"id":"68c5293e413e08a9","fromNode":"1e42bb494ed035c7","fromSide":"top","toNode":"6d4c1d6906c68852","toSide":"bottom"},
+		{"id":"b07a7bca8f100116","fromNode":"86fcfa93612d8200","fromSide":"top","toNode":"6d4c1d6906c68852","toSide":"bottom"},
+		{"id":"4488028cba4681e1","fromNode":"8a9f0e825a432ef1","fromSide":"right","toNode":"dcc921287ee83233","toSide":"left","fromEnd":"arrow"}
+	]
+}

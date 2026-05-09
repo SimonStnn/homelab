@@ -16,7 +16,14 @@ This node runs Docker Compose services from `/opt/docker`. Each service is maint
 - Services that do not declare a network use Docker's default bridge network.
 - See [`networks/README.md`](networks/README.md) for full network details.
 
-## Running services
+## Services
+
+- [cadvisor](cadvisor.md)
+- [dockge](dockge.md)
+- [homepage](homepage.md)
+- [nextcloud](nextcloud.md)
+- [uptime-kuma](uptime-kuma.md)
+### Running services
 
 > [!TIP]
 > Go to <https://dockge.lab/> to view and manage your Docker services through the Dockge UI. This is the recommended way to start, stop, and view logs for your services.
