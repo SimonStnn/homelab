@@ -2,6 +2,8 @@
 
 This repository documents my personal homelab for self-hosted services and media. It is written for the owner/maintainer and focuses on architecture, service inventory, network details, and operational notes.
 
+![banner](attachments/banner.jpg)
+
 ## Purpose
 
 - Personal services and media hosting
@@ -12,13 +14,6 @@ This repository documents my personal homelab for self-hosted services and media
 
 - The maintainer of this homelab
 - Anyone who must review or operate the services and network configuration
-
-## Repository structure
-
-- `.docs/README.md` — top-level documentation and architecture overview
-- `.docs/docker/README.md` — Docker service inventory and deployment notes
-- `.docs/docker/services/` — service reference pages
-- `.docs/nodes/` — node-specific infrastructure and network details
 
 ## Host
 
@@ -38,6 +33,16 @@ This repository documents my personal homelab for self-hosted services and media
 - Gateway: `10.20.30.5`
 - DNS: `10.20.30.5` *([Pi-hole](<docker/services/pi-hole.md>))*
 
-## Next step
+## Nodes
 
-- TODO: define and document a backup plan for config and persistent data
+> [!NOTE]
+> Explore the documentation for nodes at [the Nodes section](nodes/README.md).
+
+## Docker services
+
+> [!NOTE]
+> Explore the documentation for Docker services at [the Docker section](docker/README.md).
+
+## Backup plan
+
+> TODO: define and document a backup plan for config and persistent data

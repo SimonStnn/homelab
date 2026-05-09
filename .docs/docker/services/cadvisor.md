@@ -5,5 +5,6 @@ Find documentation at [the cAdvisor github repository](https://github.com/google
 - Location: `cadvisor/`
 - Image: `gcr.io/cadvisor/cadvisor:latest`
 - Port: `8080`
+- Network: [`pve-local`](../networks)
 - Purpose: host/container resource monitoring and metrics collection
 - Notes: uses host mounts and privileged access for container metrics
