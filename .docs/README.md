@@ -1,3 +1,25 @@
+# Homelab Documentation
+
+This repository documents my personal homelab for self-hosted services and media. It is written for the owner/maintainer and focuses on architecture, service inventory, network details, and operational notes.
+
+## Purpose
+
+- Personal services and media hosting
+- Self-hosted infrastructure and Docker-based service deployment
+- Maintainable documentation for the server node and service details
+
+## Audience
+
+- The maintainer of this homelab
+- Anyone who must review or operate the services and network configuration
+
+## Repository structure
+
+- `.docs/README.md` — top-level documentation and architecture overview
+- `.docs/docker/README.md` — Docker service inventory and deployment notes
+- `.docs/docker/services/` — service reference pages
+- `.docs/nodes/` — node-specific infrastructure and network details
+
 ## Host
 
 - CPU: 12 cores (Intel(R) Xeon(R) CPU E5-1650 v3 @ 3.50GHz)
@@ -8,3 +30,14 @@
 ### Proxmox VE
 
 - Version: 9.1.6
+
+## Current deployment
+
+- Node: `server`
+- Host IP: `10.20.30.100/24`
+- Gateway: `10.20.30.5`
+- DNS: `10.20.30.5` *([Pi-hole](<docker/services/pi-hole.md>))*
+
+## Next step
+
+- TODO: define and document a backup plan for config and persistent data

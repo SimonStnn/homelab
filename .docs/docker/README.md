@@ -1,40 +1,42 @@
 # Docker Services
 
-## Overview
+This node runs Docker Compose services from `/opt/docker`. Each service is maintained in its own folder with a Compose manifest, service data, and local configuration directories.
 
-This homelab is organized into individual service folders. Each folder contains a Docker Compose manifest and local configuration volumes where required. The file structure allows for [Dockge](dockge.md) to scan and manage the services as Docker stacks, while keeping configuration and data organized.
+## Deployment structure
 
-The current service set includes:
+- Service folder: `/opt/docker/<service>`
+- Compose file: `compose.yaml` or `docker-compose.yaml`
+- Secret files: `.env` in the service folder
+- Shared Docker network: `pve-local`
 
-- [`cadvisor/`](cadvisor.md) — Container metrics and resource monitoring
-- [`dockge/`](dockge.md) — Docker stack browser and manager
-- [`homepage/`](homepage.md) — Custom homepage / start page
-- [`nextcloud/`](nextcloud.md) — Nextcloud self-hosted file sync and collaboration
-- [`uptime-kuma/`](uptime-kuma.md) — Uptime and service monitoring
+## Docker networks
 
-## Usage
+- `pve-local` is the external bridge network used by most documented services.
+- It is defined on the host and referenced by Compose stacks with `external: true`.
+- Services that do not declare a network use Docker's default bridge network.
+- See [`networks/README.md`](networks/README.md) for full network details.
+
+## Running services
 
 > [!TIP]
 > Go to <https://dockge.lab/> to view and manage your Docker services through the Dockge UI. This is the recommended way to start, stop, and view logs for your services.
-
-Run individual services from their folder:
 
 ```bash
 cd /opt/docker/<service-folder>
 docker compose up -d
 ```
 
-If a service uses environment variables, define them in a `.env` file in the same folder or export them before starting Compose.
+If a service folder defines a `.env` file, Compose will load it automatically.
 
-### Example
+## Secrets handling
 
-```bash
-cd /opt/docker/homepage
-docker compose up -d
-```
+- Each service folder may contain a `.env` file
+- `.env` files are used for API keys, passwords, and other secrets
+- Do not commit `.env` files to Git
 
 ## Notes
 
-- `pve-local` is used as an external Docker network for services that need access to other host or LAN services.
-- Keep sensitive environment values out of version control and store them in `.env` files or a secure secret store.
-- For any service that exposes a port, verify firewall and reverse proxy configuration if you publish it externally.
+- The host publishes container ports; verify firewall and reverse proxy configuration before exposing services externally.
+- `pve-local` is the shared Docker network used by most services.
+- Keep sensitive values in `.env` files and out of Git.
+- Consult `.docs/docker/services/` for per-service reference pages.
