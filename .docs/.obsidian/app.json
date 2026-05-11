@@ -1,4 +1,5 @@
 {
-  "strictLineBreaks": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "absolute"
 }

@@ -7,15 +7,15 @@ On this page, you will find documentation for the Pi-hole node in this homelab. 
 
 ## Resources
 
-- OS: Debian 13
-- Cores: 1
-- Memory: 512MB
-- Swap: 512MB
-- Storage:
-  - Size: 8GB
-  - Location: `local-lvm`
-- Features:
-  - Nesting
+| Resource         | Allocated   |
+| ---------------- | ----------  |
+| OS               | Debian 13   |
+| Cores            | 1           |
+| Memory           | 512MB       |
+| Swap             | 512MB       |
+| Storage Size     | 8GB         |
+| Storage Location | `local-lvm` |
+| Features         | Nesting     |
 
 ## Network
 
@@ -47,20 +47,20 @@ Go to *Settings > Local DNS Records* and add records for any local devices or se
 
 ### Local DNS records
 
-| Hostname      | IP Address     | Comment                                                                      |
-| ------------- | -------------- | :--------------------------------------------------------------------------- |
-| `gateway.lab` | `10.20.30.199` | Main network gateway with Tailscale                                          |
-| `proxy.lab`   | `10.20.30.10`  | Reverse proxy for local services and will be used by all connecting clients. |
+| Hostname                                    | IP Address     | Comment                                                                      |
+| ------------------------------------------- | -------------- | :--------------------------------------------------------------------------- |
+| `gateway.lab`                               | `10.20.30.199` | Main network gateway with Tailscale                                          |
+| [`proxy.lab`](nodes/nginx-proxy-manager.md) | `10.20.30.10`  | Reverse proxy for local services and will be used by all connecting clients. |
 
 ### Local CNAME records
 
-| Hostname                                 | Target          | Comment |
-| ---------------------------------------- | --------------- | :------ |
-| [`cadvisor.lab`](https://cadvisor.lab)   | `proxy.lab`     | *NA*    |
-| [`dashboard.lab`](https://dashboard.lab) | `proxy.lab`     | *NA*    |
-| [`dns.lab`](https://dns.lab)             | `proxy.lab`     | *NA*    |
-| [`dockge.lab`](https://dockge.lab)       | `proxy.lab`     | *NA*    |
-| [`home.lab`](https://home.lab)           | `dashboard.lab` | *NA*    |
-| [`kuma.lab`](https://kuma.lab)           | `proxy.lab`     | *NA*    |
-| [`nextcloud.lab`](https://nextcloud.lab) | `proxy.lab`     | *NA*    |
-| [`proxmox.lab`](https://proxmox.lab)     | `proxy.lab`     | *NA*    |
+| Hostname                                 | Target          | Ref                                                 | Comment |
+| ---------------------------------------- | --------------- | --------------------------------------------------- | :------ |
+| [`cadvisor.lab`](https://cadvisor.lab)   | `proxy.lab`     | [cadvisor](docker/services/cadvisor.md)             | *NA*    |
+| [`dashboard.lab`](https://dashboard.lab) | `proxy.lab`     | [homepage](docker/services/homepage.md)             | *NA*    |
+| [`dns.lab`](https://dns.lab)             | `proxy.lab`     | [nginx-proxy-manager](nodes/nginx-proxy-manager.md) | *NA*    |
+| [`dockge.lab`](https://dockge.lab)       | `proxy.lab`     | [dockge](docker/services/dockge.md)                 | *NA*    |
+| [`home.lab`](https://home.lab)           | `dashboard.lab` | [homepage](docker/services/homepage.md)             | *NA*    |
+| [`kuma.lab`](https://kuma.lab)           | `proxy.lab`     | [uptime-kuma](docker/services/uptime-kuma.md)       | *NA*    |
+| [`nextcloud.lab`](https://nextcloud.lab) | `proxy.lab`     | [nextcloud](docker/services/nextcloud.md)           | *NA*    |
+| [`proxmox.lab`](https://proxmox.lab)     | `proxy.lab`     |                                                     | *NA*    |
