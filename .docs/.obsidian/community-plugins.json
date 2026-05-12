@@ -1,3 +1,7 @@
 [
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-advanced-uri",
+  "obsidian-kanban",
+  "obsidian-linter",
+  "obsidian-pandoc"
 ]
