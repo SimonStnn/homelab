@@ -1,5 +1,6 @@
 {
-  "useMarkdownLinks": true,
+  "newLinkFormat": "shortest",
   "alwaysUpdateLinks": true,
-  "newLinkFormat": "absolute"
+  "useMarkdownLinks": true,
+  "trashOption": "local"
 }

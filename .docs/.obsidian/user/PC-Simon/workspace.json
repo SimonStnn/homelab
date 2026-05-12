@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "81bb987ed180cd11",
+    "id": "67f76926264e1493",
     "type": "split",
     "children": [
       {
-        "id": "87caec9efcfa73a2",
+        "id": "19ebdd8cc53f84de",
         "type": "tabs",
         "children": [
           {
-            "id": "e57de6dcb025b54a",
+            "id": "e1ad8e6dbe4d48da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nodes/pi-hole.md",
+                "file": "nodes/pi-hole-test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pi-hole"
+              "title": "pi-hole-test"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f1075da4bd07a2a5",
+    "id": "3ec0bfcb0faa44e6",
     "type": "split",
     "children": [
       {
-        "id": "388302454e679c1d",
+        "id": "082a03ddc4ddf254",
         "type": "tabs",
         "children": [
           {
-            "id": "51f65a304cc9fa0a",
+            "id": "a169158f9e6b9d4c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "6bca0aec3e60cd61",
+            "id": "ee32c1cea63adb9a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "e92496e84f7aaff2",
+            "id": "c148ae796817eb36",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,19 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "3dad0e4dd3daacb6",
+    "id": "8b140199da5c3f7c",
     "type": "split",
     "children": [
       {
-        "id": "3bd613b8cf78b0c9",
+        "id": "4c5f3226237407bd",
         "type": "tabs",
         "children": [
           {
-            "id": "f066a911030fba41",
+            "id": "f5b43333aa62fc39",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "nodes/pi-hole-test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,11 +104,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for pi-hole-test"
             }
           },
           {
-            "id": "9840d6da2a75bc20",
+            "id": "a82b003877771fba",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -120,7 +121,7 @@
             }
           },
           {
-            "id": "ee93b53de177fe4b",
+            "id": "8707320bd4a83e4e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -135,7 +136,7 @@
             }
           },
           {
-            "id": "f0eb3d72fc4ac1bc",
+            "id": "688ffb13daa4ec3a",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -149,7 +150,7 @@
             }
           },
           {
-            "id": "e39fe35f3f921f95",
+            "id": "5280c59524267ceb",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -176,19 +177,21 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "bases:Create new base": false,
       "command-palette:Open command palette": false,
-      "obsidian42-brat:BRAT": true,
-      "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false
+      "bases:Create new base": false
     }
   },
-  "active": "e57de6dcb025b54a",
+  "active": "e1ad8e6dbe4d48da",
   "lastOpenFiles": [
-    "docker/services/cadvisor.md",
+    ".obsidian/plugins/remote-ssh/data.json",
+    ".obsidian/plugins/remote-ssh",
     "nodes/pi-hole.md",
+    "nodes/nginx-proxy-manager.md",
+    "nodes/pi-hole-test.md",
     "nodes/README.md",
-    "nodes/Architecture diagram.canvas",
+    "docker/networks/README.md",
+    "nodes/server.md",
+    "nodes",
     ".obsidian/plugins/obsidian-git/styles.css",
     ".obsidian/plugins/obsidian-git/manifest.json",
     ".obsidian/plugins/obsidian-git/main.js",
@@ -197,18 +200,15 @@
     "docker/services/nextcloud.md",
     "docker/services/homepage.md",
     "docker/services/dockge.md",
-    "docker/networks/README.md",
+    "docker/services/cadvisor.md",
     ".obsidian/plugins/obsidian-git",
     "nodes/tailscale-gateway.md",
-    "nodes/server.md",
-    "nodes/nginx-proxy-manager.md",
+    "nodes/Architecture diagram.canvas",
     "docker/README.md",
     "attachments/banner.jpg",
+    ".obsidian/workspaces.json",
     ".obsidian/workspace.json",
     ".obsidian/graph.json",
-    ".obsidian/core-plugins.json",
-    ".obsidian/community-plugins.json",
-    ".obsidian/backlink.json",
     "README.md"
   ]
 }

@@ -7,15 +7,15 @@ On this page, you will find documentation for the Pi-hole node in this homelab. 
 
 ## Resources
 
-| Resource         | Allocated   |
-| ---------------- | ----------  |
-| OS               | Debian 13   |
-| Cores            | 1           |
-| Memory           | 512MB       |
-| Swap             | 512MB       |
-| Storage Size     | 8GB         |
-| Storage Location | `local-lvm` |
-| Features         | Nesting     |
+| Resource         | Allocated                                   |
+| ---------------- | ------------------------------------------- |
+| OS               | Debian 13                                   |
+| Cores            | 1                                           |
+| Memory           | 512MB                                       |
+| Swap             | 512MB                                       |
+| Storage Size     | 8GB                                         |
+| Storage Location | [`local-lvm`](../docker/networks/README.md) |
+| Features         | Nesting                                     |
 
 ## Network
 

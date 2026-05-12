@@ -1,6 +1,6 @@
 # Server node
 
-Refer to [the Docker documentation](../docker) for details on the services running on this node, including: [cAdvisor](../docker#cadvisor), [Dockge](../docker#dockge), [Homepage](../docker#homepage), [Nextcloud](../docker#nextcloud), and [Uptime Kuma](../docker#uptime-kuma).
+Refer to the [Docker documentation](docker/README.md) for details on the services running on this node, including: [cAdvisor](cadvisor.md), [dockge](dockge.md), [homepage](homepage.md), [nextcloud](nextcloud.md)and [uptime-kuma](uptime-kuma.md).
 
 > [!NOTE]
 > Visit <https://home.lab/> to access the homepage for this node, which provides links to all services and more!
