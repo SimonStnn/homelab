@@ -1,14 +1,14 @@
 {
 	"nodes":[
-		{"id":"75071e298e066fb3","x":80,"y":-760,"width":400,"height":440,"type":"file","file":"nodes/tailscale-gateway.md"},
-		{"id":"8a9f0e825a432ef1","x":-440,"y":-200,"width":400,"height":400,"type":"file","file":"nodes/pi-hole.md"},
-		{"id":"dcc921287ee83233","x":600,"y":-200,"width":400,"height":400,"type":"file","file":"nodes/nginx-proxy-manager.md"},
-		{"id":"6d4c1d6906c68852","x":80,"y":400,"width":400,"height":400,"type":"file","file":"nodes/server.md"},
-		{"id":"be6965c15f33cc51","x":-320,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/dockge.md"},
-		{"id":"1e42bb494ed035c7","x":120,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/homepage.md"},
-		{"id":"aaa0b309d78592ef","x":-760,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/cadvisor.md"},
-		{"id":"9720dc494ede95c3","x":560,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/nextcloud.md"},
-		{"id":"86fcfa93612d8200","x":1000,"y":1240,"width":400,"height":400,"type":"file","file":"docker/services/uptime-kuma.md"}
+		{"id":"75071e298e066fb3","x":80,"y":-760,"width":400,"height":440,"type":"file","file":"Nodes/tailscale-gateway.md"},
+		{"id":"8a9f0e825a432ef1","x":-440,"y":-200,"width":400,"height":400,"type":"file","file":"Nodes/pi-hole.md"},
+		{"id":"dcc921287ee83233","x":600,"y":-200,"width":400,"height":400,"type":"file","file":"Nodes/nginx-proxy-manager.md"},
+		{"id":"6d4c1d6906c68852","x":80,"y":400,"width":400,"height":400,"type":"file","file":"Nodes/server.md"},
+		{"id":"be6965c15f33cc51","x":-320,"y":1240,"width":400,"height":400,"type":"file","file":"Docker/Services/dockge.md"},
+		{"id":"1e42bb494ed035c7","x":120,"y":1240,"width":400,"height":400,"type":"file","file":"Docker/Services/homepage.md"},
+		{"id":"aaa0b309d78592ef","x":-760,"y":1240,"width":400,"height":400,"type":"file","file":"Docker/Services/cadvisor.md"},
+		{"id":"9720dc494ede95c3","x":560,"y":1240,"width":400,"height":400,"type":"file","file":"Docker/Services/nextcloud.md"},
+		{"id":"86fcfa93612d8200","x":1000,"y":1240,"width":400,"height":400,"type":"file","file":"Docker/Services/uptime-kuma.md"}
 	],
 	"edges":[
 		{"id":"5aa8ecaab735026e","fromNode":"75071e298e066fb3","fromSide":"bottom","toNode":"8a9f0e825a432ef1","toSide":"top","fromEnd":"arrow"},

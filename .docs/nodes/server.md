@@ -1,6 +1,6 @@
 # Server node
 
-Refer to the [Docker documentation](docker/README.md) for details on the services running on this node, including: [cAdvisor](cadvisor.md), [dockge](dockge.md), [homepage](homepage.md), [nextcloud](nextcloud.md)and [uptime-kuma](uptime-kuma.md).
+Refer to the [Docker documentation](Docker/README.md) for details on the services running on this node, including: [cAdvisor](cadvisor.md), [dockge](dockge.md), [homepage](homepage.md), [nextcloud](nextcloud.md)and [uptime-kuma](uptime-kuma.md).
 
 > [!NOTE]
 > Visit <https://home.lab/> to access the homepage for this node, which provides links to all services and more!
@@ -13,15 +13,15 @@ Refer to the [Docker documentation](docker/README.md) for details on the service
 
 ## Resources
 
-- OS: Debian 13
-- Cores: 10
-- Memory: 24GB
-- Swap: 512MB
-- Storage:
-  - Size: 256GB
-  - Location: `local-lvm`
-- Features:
-  - Nesting
+|                  |                                          |
+| ---------------- | ---------------------------------------- |
+| OS               | Debian 13                                |
+| Cores            | 10                                       |
+| Memory           | 24GB                                     |
+| Swap             | 512MB                                    |
+| Storage Size     | 256GB                                    |
+| Storage Location | [`local-lvm`](Docker/Networks/README.md) |
+| Features         | Nesting                                  |
 
 ## Network
 
@@ -29,11 +29,21 @@ Refer to the [Docker documentation](docker/README.md) for details on the service
 - Bridge: `vmbr1`
 - IPv4 Address: `10.20.30.100/24`
 - IPv4 Gateway: `10.20.30.5` *([Pi-hole](pi-hole.md))*
-- DNS: `10.20.30.5` *([Pi-hole](pi-hole.md))*
 
-## Docker architecture
+|              |                            |
+| ------------ | -------------------------- |
+| Name         | `eth0`                     |
+| Bridge       | `vmbr1`                    |
+| IPv4 Address | `10.20.30.100/24`          |
+| IPv4 Gateway | [`10.20.30.5`](pi-hole.md) |
+## DNS
 
-- Services deployed with Docker Compose under `/opt/docker`
-- Shared external Docker network: `pve-local`
-- Published host ports provide container access from the LAN
-- Secrets are managed per-service in `.env` files
+|            |                                        |
+| ---------- | -------------------------------------- |
+| Hostname   | `server`                               |
+| DNS Domain | *host*                                 |
+| DNS server | [`10.20.30.5`](pi-hole.md) (This node) |
+
+
+> [!TIP] More documentation
+> See [the Docker documentation](Docker/README.md) for more information.

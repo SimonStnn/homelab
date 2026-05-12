@@ -14,7 +14,7 @@ This node runs Docker Compose services from `/opt/docker`. Each service is maint
 - `pve-local` is the external bridge network used by most documented services.
 - It is defined on the host and referenced by Compose stacks with `external: true`.
 - Services that do not declare a network use Docker's default bridge network.
-- See [`networks/README.md`](networks/README.md) for full network details.
+- See [`networks/README.md`](Docker/Networks/README.md) for full network details.
 
 ## Services
 

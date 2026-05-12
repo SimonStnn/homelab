@@ -7,26 +7,28 @@ On this page, you will find documentation for the Nginx Proxy Manager node in th
 
 ## Resources
 
-- OS: Debian 13
-- Cores: 1
-- Memory: 512MB
-- Swap: 512MB
-- Storage:
-  - Size: 8GB
-  - Location: `local-lvm`
-- Features:
-  - Nesting
+|                  |                                          |
+| ---------------- | ---------------------------------------- |
+| OS               | Debian 13                                |
+| Cores            | 1                                        |
+| Memory           | 512MB                                    |
+| Swap             | 512MB                                    |
+| Storage Size     | 8GB                                      |
+| Storage Location | [`local-lvm`](Docker/Networks/README.md) |
+| Features         | Nesting                                  |
 
 ## Network
 
-- Name: `eth0`
-- Bridge: `vmbr1`
-- IPv4 Address: `10.20.30.10/24`
-- IPv4 Gateway: `10.20.30.1`
+|              |                  |
+| ------------ | ---------------- |
+| Name         | `eth0`           |
+| Bridge       | `vmbr1`          |
+| IPv4 Address | `10.20.30.10/24` |
+| IPv4 Gateway | `10.20.30.1`     |
 
 ## DNS
 
-- DNS server: `10.20.30.5` (Pi-hole node itself)
+- DNS server: [`10.20.30.5`](pi-hole.md) ([Pi-hole](pi-hole.md))
 
 ## Proxy Hosts
 
