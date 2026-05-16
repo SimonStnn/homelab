@@ -26,22 +26,24 @@ docker-compose.override.yml
 docker-compose.override.yaml
 
 # Local data directories / generated runtime data
-/dockge/data/
-/uptime-kuma/uptime-kuma-data/
-/homarr/homarr/appdata/
+/stacks/pve-server/dockge/data/
+/stacks/pve-server/uptime-kuma/uptime-kuma-data/
+/stacks/pve-server/homarr/homarr/appdata/
 
 # Local database files
-/dockge/data/*.db*
-/uptime-kuma/uptime-kuma-data/*.db*
+db/
+/stacks/pve-server/dockge/data/*.db*
+/stacks/pve-server/uptime-kuma/uptime-kuma-data/*.db*
 
 # Local runtime artifacts
-/uptime-kuma/uptime-kuma-data/screenshots/
-/uptime-kuma/uptime-kuma-data/upload/
-/uptime-kuma/uptime-kuma-data/docker-tls/
+/stacks/pve-server/uptime-kuma/uptime-kuma-data/screenshots/
+/stacks/pve-server/uptime-kuma/uptime-kuma-data/upload/
+/stacks/pve-server/uptime-kuma/uptime-kuma-data/docker-tls/
 
 # Local config/state files that should not be committed
-/dockge/data/db-config.json
-/uptime-kuma/uptime-kuma-data/db-config.json
+.encryption_key
+/stacks/pve-server/dockge/data/db-config.json
+/stacks/pve-server/uptime-kuma/uptime-kuma-data/db-config.json
 
 # Logs
 *.log
@@ -57,10 +59,3 @@ logs/
 # Terraform state
 *.tfstate
 *.tfstate.backup
-
-# IDE / Editor
-*.code-workspace
-.vscode/
-
-# Optional: ignore macOS Icon files
-Icon?

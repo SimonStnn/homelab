@@ -8,7 +8,7 @@ background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=fo
 headerStyle: boxedWidgets
 cardBlur: xs
 showStats: true
-# useEqualHeights: true
+useEqualHeights: true
 disableIndexing: true
 hideErrors: true
 

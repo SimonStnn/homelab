@@ -51,6 +51,11 @@
         href: https://nextcloud.lab/
         description: Self-hosted cloud storage
         siteMonitor: https://nextcloud.lab/heartbeat
+    # - Plane:
+    #     icon: plane.svg
+    #     href: https://plane.lab/
+    #     description: Kubernetes dashboard for K3s cluster
+    #     siteMonitor: https://plane.lab/health
 
   - Tailscale:
     - Tailscale Network:
