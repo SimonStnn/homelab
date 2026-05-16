@@ -14,7 +14,7 @@ On this page, you will find documentation for the Pi-hole node in this homelab. 
 | Memory           | 512MB                                    |
 | Swap             | 512MB                                    |
 | Storage Size     | 8GB                                      |
-| Storage Location | [`local-lvm`](Docker/Networks/README.md) |
+| Storage Location | [`local-lvm`](docs/docker/networks/README.md) |
 | Features         | Nesting                                  |
 
 ## Network
@@ -32,7 +32,7 @@ On this page, you will find documentation for the Pi-hole node in this homelab. 
 | ---------- | -------------------------------------- |
 | Hostname   | `pi-hole`                              |
 | DNS Domain | *host*                                 |
-| DNS server | [`10.20.30.5`](pi-hole.md) (This node) |
+| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) (This node) |
 
 ## Changed settings
 
@@ -51,7 +51,7 @@ Go to *Settings > DNS* and set "Conditional forwarding" to forward local network
 true,10.20.30.0/24,10.20.30.199,ts.net
 ```
 
-This allows Pi-hole to resolve local hostnames for devices on the network, improving visibility and usability when accessing local services. This is required for setting up the tailscale configuration to use Pi-hole as the DNS server for devices connected through Tailscale. Please refer to [the Tailscale documentation](tailscale-gateway.md) for more details on this configuration.
+This allows Pi-hole to resolve local hostnames for devices on the network, improving visibility and usability when accessing local services. This is required for setting up the tailscale configuration to use Pi-hole as the DNS server for devices connected through Tailscale. Please refer to [the Tailscale documentation](docs/nodes/tailscale-gateway.md) for more details on this configuration.
 
 ## Local DNS settings
 
@@ -62,17 +62,17 @@ Go to *Settings > Local DNS Records* and add records for any local devices or se
 | Hostname                                    | IP Address     | Comment                                                                      |
 | ------------------------------------------- | -------------- | :--------------------------------------------------------------------------- |
 | `gateway.lab`                               | `10.20.30.199` | Main network gateway with Tailscale                                          |
-| [`proxy.lab`](nginx-proxy-manager.md) | `10.20.30.10`  | Reverse proxy for local services and will be used by all connecting clients. |
+| [`proxy.lab`](docs/nodes/nginx-proxy-manager.md) | `10.20.30.10`  | Reverse proxy for local services and will be used by all connecting clients. |
 
 ### Local CNAME records
 
-| Hostname                                 | Target          | Ref                                                 | Comment |
-| ---------------------------------------- | --------------- | --------------------------------------------------- | :------ |
-| [`cadvisor.lab`](https://cadvisor.lab)   | `proxy.lab`     | [cadvisor](cadvisor.md)             | *NA*    |
-| [`dashboard.lab`](https://dashboard.lab) | `proxy.lab`     | [homepage](homepage.md)             | *NA*    |
-| [`dns.lab`](https://dns.lab)             | `proxy.lab`     | [nginx-proxy-manager](nginx-proxy-manager.md) | *NA*    |
-| [`dockge.lab`](https://dockge.lab)       | `proxy.lab`     | [dockge](dockge.md)                 | *NA*    |
-| [`home.lab`](https://home.lab)           | `dashboard.lab` | [homepage](homepage.md)             | *NA*    |
-| [`kuma.lab`](https://kuma.lab)           | `proxy.lab`     | [uptime-kuma](uptime-kuma.md)       | *NA*    |
-| [`nextcloud.lab`](https://nextcloud.lab) | `proxy.lab`     | [nextcloud](nextcloud.md)           | *NA*    |
-| [`proxmox.lab`](https://proxmox.lab)     | `proxy.lab`     |                                                     | *NA*    |
+| Hostname                                 | Target          | Ref                                                      | Comment |
+| ---------------------------------------- | --------------- | -------------------------------------------------------- | :------ |
+| [`cadvisor.lab`](https://cadvisor.lab)   | `proxy.lab`     | [cadvisor](docs/docker/services/cadvisor.md)             | *NA*    |
+| [`dashboard.lab`](https://dashboard.lab) | `proxy.lab`     | [homepage](docs/docker/services/homepage.md)             | *NA*    |
+| [`dns.lab`](https://dns.lab)             | `proxy.lab`     | [nginx-proxy-manager](docs/nodes/nginx-proxy-manager.md) | *NA*    |
+| [`dockge.lab`](https://dockge.lab)       | `proxy.lab`     | [dockge](docs/docker/services/dockge.md)                 | *NA*    |
+| [`home.lab`](https://home.lab)           | `dashboard.lab` | [homepage](docs/docker/services/homepage.md)             | *NA*    |
+| [`kuma.lab`](https://kuma.lab)           | `proxy.lab`     | [uptime-kuma](docs/docker/services/uptime-kuma.md)       | *NA*    |
+| [`nextcloud.lab`](https://nextcloud.lab) | `proxy.lab`     | [nextcloud](docs/docker/services/nextcloud.md)           | *NA*    |
+| [`proxmox.lab`](https://proxmox.lab)     | `proxy.lab`     | [host](docs/README.md)                                   | *NA*    |

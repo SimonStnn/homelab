@@ -14,15 +14,15 @@ This node runs Docker Compose services from `/opt/docker`. Each service is maint
 - `pve-local` is the external bridge network used by most documented services.
 - It is defined on the host and referenced by Compose stacks with `external: true`.
 - Services that do not declare a network use Docker's default bridge network.
-- See [`networks/README.md`](Docker/Networks/README.md) for full network details.
+- See [Networks](docs/docker/networks/README.md) for full network details.
 
 ## Services
 
-- [cadvisor](cadvisor.md)
-- [dockge](dockge.md)
-- [homepage](homepage.md)
-- [nextcloud](nextcloud.md)
-- [uptime-kuma](uptime-kuma.md)
+- [cAdvisor](docs/docker/services/cadvisor.md)
+- [Dockge](docs/docker/services/dockge.md)
+- [Homepage](docs/docker/services/homepage.md)
+- [Nextcloud](docs/docker/services/nextcloud.md)
+- [Uptime-kuma](docs/docker/services/uptime-kuma.md)
 ### Running services
 
 > [!TIP]

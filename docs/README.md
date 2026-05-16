@@ -2,7 +2,7 @@
 
 This repository documents my personal homelab for self-hosted services and media. It is written for the owner/maintainer and focuses on architecture, service inventory, network details, and operational notes.
 
-![banner](attachments/banner.jpg)
+![banner](docs/attachments/banner.jpg)
 
 ## Purpose
 
@@ -31,15 +31,17 @@ This repository documents my personal homelab for self-hosted services and media
 ## Nodes
 
 > [!NOTE]
-> Explore the documentation for nodes at [the Nodes section](Nodes/README.md).
+> Explore the documentation for nodes at [the Nodes section](docs/nodes/README.md).
 
- ![README](Nodes/README.md)
+ ![README](docs/nodes/README.md)
+
 ## Docker services
 
 > [!NOTE]
-> Explore the documentation for Docker services at [the Docker section](Docker/README.md).
+> Explore the documentation for Docker services at [the Docker section](docs/docker/README.md).
 
-![README](Docker/README.md)
+![README](docs/docker/README.md)
+
 ## Backup plan
 
 > TODO: define and document a backup plan for config and persistent data

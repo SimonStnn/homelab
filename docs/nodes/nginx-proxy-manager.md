@@ -14,7 +14,7 @@ On this page, you will find documentation for the Nginx Proxy Manager node in th
 | Memory           | 512MB                                    |
 | Swap             | 512MB                                    |
 | Storage Size     | 8GB                                      |
-| Storage Location | [`local-lvm`](Docker/Networks/README.md) |
+| Storage Location | [`local-lvm`](docs/docker/networks/README.md) |
 | Features         | Nesting                                  |
 
 ## Network
@@ -28,7 +28,7 @@ On this page, you will find documentation for the Nginx Proxy Manager node in th
 
 ## DNS
 
-- DNS server: [`10.20.30.5`](pi-hole.md) ([Pi-hole](pi-hole.md))
+- DNS server: [`10.20.30.5`](docs/nodes/pi-hole.md) ([Pi-hole](docs/nodes/pi-hole.md))
 
 ## Proxy Hosts
 

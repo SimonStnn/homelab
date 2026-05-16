@@ -11,14 +11,24 @@
             "id": "82a29129e9532b74",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".docs/Notes/Kanban Items/Test issue.md",
-                "bFile": ".docs/Notes/Kanban Items/Test issue.md",
-                "aRef": ""
+                "file": "docs/nodes/server.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: Test issue  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "server"
             }
           }
         ]
@@ -53,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"not created\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,31 +166,22 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docker/README.md",
+                "file": "docs/nodes/server.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
-            }
-          },
-          {
-            "id": "3bb84369063d6e4f",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline of server"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 520.5
+    "width": 266.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,25 +190,28 @@
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
-      "obsidian-kanban:Create new board": false,
-      "obsidian-livesync:P2P Replicator": false,
-      "obsidian-livesync:Replicate": false,
-      "obsidian-livesync:Show Log": false,
-      "obsidian-livesync:Show Customization sync": false
+      "bases:Create new base": false
     }
   },
   "active": "82a29129e9532b74",
   "lastOpenFiles": [
+    "docs/nodes/tailscale-gateway.md",
+    "docs/README.md",
+    "README.md",
+    "docs/nodes/pi-hole.md",
+    "docs/docker/services/uptime-kuma.md",
+    "docs/docker/README.md",
+    "docs/docker/services/cadvisor.md",
+    "docs/docker/networks/README.md",
+    "docs/docker/services/dockge.md",
+    "docs/docker/services/homepage.md",
+    "docs/docker/services/nextcloud.md",
     "Untitled Kanban.md",
     "Notes/Kanban Items/Test issue.md",
     "Notes/Kanban Items",
     "Notes",
     "Test item.md",
     "nodes/server.md",
-    "README.md",
     "nodes/README.md",
     "docker/README.md",
     "docker/services/uptime-kuma.md",

@@ -1,6 +1,6 @@
 # Server node
 
-Refer to the [Docker documentation](Docker/README.md) for details on the services running on this node, including: [cAdvisor](cadvisor.md), [dockge](dockge.md), [homepage](homepage.md), [nextcloud](nextcloud.md)and [uptime-kuma](uptime-kuma.md).
+Refer to the [Docker documentation](docs/docker/README.md) for details on the services running on this node, including: [cAdvisor](docs/docker/services/cadvisor.md), [dockge](docs/docker/services/dockge.md), [homepage](docs/docker/services/homepage.md), [nextcloud](docs/docker/services/nextcloud.md) and [uptime-kuma](docs/docker/services/uptime-kuma.md).
 
 > [!NOTE]
 > Visit <https://home.lab/> to access the homepage for this node, which provides links to all services and more!
@@ -20,30 +20,25 @@ Refer to the [Docker documentation](Docker/README.md) for details on the service
 | Memory           | 24GB                                     |
 | Swap             | 512MB                                    |
 | Storage Size     | 256GB                                    |
-| Storage Location | [`local-lvm`](Docker/Networks/README.md) |
+| Storage Location | [`local-lvm`](docs/docker/networks/README.md) |
 | Features         | Nesting                                  |
 
 ## Network
-
-- Name: `eth0`
-- Bridge: `vmbr1`
-- IPv4 Address: `10.20.30.100/24`
-- IPv4 Gateway: `10.20.30.5` *([Pi-hole](pi-hole.md))*
 
 |              |                            |
 | ------------ | -------------------------- |
 | Name         | `eth0`                     |
 | Bridge       | `vmbr1`                    |
 | IPv4 Address | `10.20.30.100/24`          |
-| IPv4 Gateway | [`10.20.30.5`](pi-hole.md) |
+| IPv4 Gateway | [`10.20.30.5`](docs/nodes/pi-hole.md) |
+
 ## DNS
 
 |            |                                        |
 | ---------- | -------------------------------------- |
 | Hostname   | `server`                               |
 | DNS Domain | *host*                                 |
-| DNS server | [`10.20.30.5`](pi-hole.md) (This node) |
-
+| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) (This node) |
 
 > [!TIP] More documentation
-> See [the Docker documentation](Docker/README.md) for more information.
+> See [the Docker documentation](docs/docker/README.md) for more information.

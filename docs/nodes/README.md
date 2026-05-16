@@ -5,10 +5,10 @@ Each node has its own purpose, network address, and service role.
 
 ## Nodes included
 
-- [`server`](server.md) — main Docker node hosting most homelab services.
-- [`nginx-proxy-manager`](nginx-proxy-manager.md) — reverse proxy and SSL manager for service routing.
-- [`pi-hole`](pi-hole.md) — DNS and network-wide ad blocking.
-- [`tailscale-gateway`](tailscale-gateway.md) — remote access gateway for secure homelab connectivity.
+- [`server`](docs/nodes/server.md) — main Docker node hosting most homelab services.
+- [`nginx-proxy-manager`](docs/nodes/nginx-proxy-manager.md) — reverse proxy and SSL manager for service routing.
+- [`pi-hole`](docs/nodes/pi-hole.md) — DNS and network-wide ad blocking.
+- [`tailscale-gateway`](docs/nodes/tailscale-gateway.md) — remote access gateway for secure homelab connectivity.
 
 ## Why this matters
 

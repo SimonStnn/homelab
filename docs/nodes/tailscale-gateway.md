@@ -11,7 +11,7 @@ On this page, you will find documentation for the Tailscale gateway node in this
 | Memory           | 512MB                                    |
 | Swap             | 512MB                                    |
 | Storage Size     | 4GB                                      |
-| Storage Location | [`local-lvm`](Docker/Networks/README.md) |
+| Storage Location | [`local-lvm`](docs/docker/networks/README.md) |
 | Features         | Nesting                                  |
 
 ## Network
@@ -29,7 +29,7 @@ On this page, you will find documentation for the Tailscale gateway node in this
 | ---------- | -------------------------------------- |
 | Hostname   | `tailscale-gateway`                    |
 | DNS Domain | *host*                                 |
-| DNS server | [`10.20.30.5`](pi-hole.md) (This node) |
+| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) (This node) |
 
 ## Setup
 
