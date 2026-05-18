@@ -21,6 +21,11 @@
         href: https://dns.lab/admin/
         description: Network-wide ad blocker & DNS server
         siteMonitor: https://dns.lab/admin/img/favicons/favicon-16x16.png
+        widget:
+          type: pihole
+          url: http://10.20.30.5
+          version: 6
+          key: {{HOMEPAGE_VAR_PI_HOLE_API_KEY}}
     - Nginx Proxy Manager:
         icon: nginx-proxy-manager.svg
         href: https://proxy.lab/
@@ -28,14 +33,20 @@
         siteMonitor: https://proxy.lab/api/
         widget:
           type: npm
-          url: https://proxy.lab/
-          username: admin@admin.net
-          password: jL3JP7Q!588*v3^d
-    - Dockge:
-        icon: dockge.svg
-        href: https://dockge.lab/
-        description: Docker GUI for Home Server
-        siteMonitor: https://dockge.lab/status
+          url: http://10.20.30.10:81
+          username: {{HOMEPAGE_VAR_PROXY_USERNAME}}
+          password: {{HOMEPAGE_VAR_PROXY_PASSWORD}}
+    - Dockhand:
+        icon: dockhand.png
+        href: https://dockhand.lab/
+        description: Docker container management and monitoring
+        siteMonitor: https://dockhand.lab/api/health
+        widget:
+          type: dockhand
+          url: https://dockhand.lab/
+          # environment: local # optional: name or id; aggregates all when omitted
+          username: {{HOMEPAGE_VAR_DOCKHAND_USERNAME}}
+          password: {{HOMEPAGE_VAR_DOCKHAND_PASSWORD}}
     - Uptime Kuma:
         icon: uptime-kuma.svg
         href: https://kuma.lab/
@@ -117,15 +128,15 @@
 
 
 - Home Server:
-  - Homepage:
-      icon: homepage.png
-      href: http://10.250.3.225/
-      siteMonitor: http://10.250.3.225/favicon-16x16.png?v=4
-  - Portainer:
-      icon: portainer.svg
-      href: https://10.250.3.225:9443/
-      description: Container Management
-      siteMonitor: https://10.250.3.225:9443/api/system/status
+  # - Homepage:
+  #     icon: homepage.png
+  #     href: http://10.250.3.225/
+  #     siteMonitor: http://10.250.3.225/favicon-16x16.png?v=4
+  # - Portainer:
+  #     icon: portainer.svg
+  #     href: https://10.250.3.225:9443/
+  #     description: Container Management
+  #     siteMonitor: https://10.250.3.225:9443/api/system/status
   - Gitea:
       icon: gitea.svg
       href: https://git.stijnen.be/
