@@ -25,11 +25,11 @@ On this page, you will find documentation for the Tailscale gateway node in this
 
 ## DNS
 
-|            |                                        |
-| ---------- | -------------------------------------- |
-| Hostname   | `tailscale-gateway`                    |
-| DNS Domain | *host*                                 |
-| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) (This node) |
+|            |                                       |
+| ---------- | ------------------------------------- |
+| Hostname   | `tailscale-gateway`                   |
+| DNS Domain | *host*                                |
+| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) |
 
 ## Setup
 

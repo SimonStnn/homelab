@@ -25,20 +25,20 @@ Refer to the [Docker documentation](docs/docker/README.md) for details on the se
 
 ## Network
 
-|              |                            |
-| ------------ | -------------------------- |
-| Name         | `eth0`                     |
-| Bridge       | `vmbr1`                    |
-| IPv4 Address | `10.20.30.100/24`          |
-| IPv4 Gateway | [`10.20.30.5`](docs/nodes/pi-hole.md) |
+|              |                   |
+| ------------ | ----------------- |
+| Name         | `eth0`            |
+| Bridge       | `vmbr1`           |
+| IPv4 Address | `10.20.30.100/24` |
+| IPv4 Gateway | `10.20.30.1`      |
 
 ## DNS
 
-|            |                                        |
-| ---------- | -------------------------------------- |
-| Hostname   | `server`                               |
-| DNS Domain | *host*                                 |
-| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) (This node) |
+|            |                                       |
+| ---------- | ------------------------------------- |
+| Hostname   | `server`                              |
+| DNS Domain | *host*                                |
+| DNS server | [`10.20.30.5`](docs/nodes/pi-hole.md) |
 
 > [!TIP] More documentation
 > See [the Docker documentation](docs/docker/README.md) for more information.
