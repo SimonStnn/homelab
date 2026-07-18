@@ -25,10 +25,10 @@ layout:
     style: row
     columns: 2
     disableCollapse: true
-    "Radxa E25":
+    "Homelab PVE":
       header: false
-      # style: row
-      # columns: 1
+      style: row
+      columns: 2
       useEqualHeights: true
       disableCollapse: true
     "VIVES":
@@ -63,7 +63,7 @@ layout:
     disableCollapse: true
     "Portfolio":
       style: row
-      columns: 3
+      columns: 2
     "Pop-a-loon":
       style: row
       columns: 2

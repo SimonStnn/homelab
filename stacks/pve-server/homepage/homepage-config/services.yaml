@@ -62,11 +62,16 @@
         href: https://nextcloud.lab/
         description: Self-hosted cloud storage
         siteMonitor: https://nextcloud.lab/heartbeat
-    # - Plane:
-    #     icon: plane.svg
-    #     href: https://plane.lab/
-    #     description: Kubernetes dashboard for K3s cluster
-    #     siteMonitor: https://plane.lab/health
+    - Documentation:
+        icon: mkdocs.svg
+        href: https://docs.lab/
+        description: Documentation for my homelab
+        siteMonitor: https://docs.lab/
+    # - Paperless-NGX:
+    #     icon: paperless-ngx.svg
+    #     href: https://paperless.lab/
+    #     description: Self-hosted document management
+    #     siteMonitor: https://paperless.lab/health
 
   - Tailscale:
     - Tailscale Network:
@@ -227,15 +232,14 @@
 
   - Website Mara:
     - Website:
-        icon: https://website-mara-91c43.web.app/favicon.svg
+        icon: https://website-mara-91c43.web.app/favicon.ico
         href: https://website-mara-91c43.web.app/
         description: Website for my liefje
-        siteMonitor: https://website-mara-91c43.web.app/favicon.svg
-        statusStyle: "dot"
+        siteMonitor: https://website-mara-91c43.web.app/favicon.ico
     - Firebase:
         icon: firebase.svg
         href: https://console.firebase.google.com/u/0/project/website-mara-91c43/overview
-        description: Firebase Console for Website Mara — Hosting platform and database management
+        description: Firebase Console for Website Mara
 
 - Other:
   - Other projects:

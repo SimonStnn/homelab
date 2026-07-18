@@ -29,6 +29,12 @@ docker-compose.override.yaml
 /stacks/pve-server/dockge/data/
 /stacks/pve-server/uptime-kuma/uptime-kuma-data/
 /stacks/pve-server/homarr/homarr/appdata/
+/stacks/pve-server/paperless/consume/
+/stacks/pve-server/paperless/data/
+/stacks/pve-server/paperless/export/
+/stacks/pve-server/paperless/media/
+/stacks/pve-server/paperless/pgdata/
+/stacks/pve-server/paperless/redisdata/
 
 # Local database files
 db/
